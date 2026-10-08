@@ -1,0 +1,54 @@
+.main {
+  width: min(900px, calc(100% - 56px));
+  min-height: 62vh;
+  margin: 0 auto;
+  padding: 100px 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.kicker {
+  margin: 0;
+  color: var(--forest);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.main h1 {
+  margin: 18px 0 15px;
+  font-family: var(--font-serif);
+  font-size: clamp(3.8rem, 10vw, 7rem);
+  font-weight: 400;
+  letter-spacing: -0.08em;
+  line-height: 0.98;
+}
+
+.main h1 em {
+  color: var(--forest);
+  font-weight: 400;
+}
+
+.main > p:not(.kicker) {
+  max-width: 42ch;
+  margin: 0 0 25px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.main a {
+  color: var(--forest);
+  font-size: 0.84rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+@media (max-width: 560px) {
+  .main {
+    width: calc(100% - 36px);
+    min-height: 68vh;
+  }
+}

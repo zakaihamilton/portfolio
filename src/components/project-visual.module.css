@@ -1,0 +1,62 @@
+.frame {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.image {
+  object-position: center;
+}
+
+.cover .image {
+  object-fit: cover;
+}
+
+.contain .image {
+  object-fit: contain;
+  padding: 4%;
+}
+
+.card {
+  aspect-ratio: 1.62;
+  border-radius: 5px;
+}
+
+.hero {
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgb(23 36 31 / 14%);
+  border-radius: 8px;
+  box-shadow: 0 22px 60px rgb(32 44 38 / 16%);
+}
+
+.detail {
+  aspect-ratio: 1.8;
+  border-radius: 8px;
+}
+
+.ink {
+  background: #101817;
+}
+
+.paper {
+  background: #f2efe6;
+}
+
+.sand {
+  background: #ddd7c9;
+}
+
+.slate {
+  background: #e7edf4;
+}
+
+.forest {
+  background: #0d2b29;
+}
+
+@media (max-width: 700px) {
+  .detail {
+    aspect-ratio: 1.32;
+  }
+}
