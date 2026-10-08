@@ -1,11 +1,7 @@
 import Link from "next/link";
 import { ProjectCard } from "@/components/project-card";
 import { ProjectVisual } from "@/components/project-visual";
-import {
-  formattedProjectCount,
-  projectCount,
-  projects,
-} from "@/data/projects";
+import { formattedProjectCount, projectCount, projects } from "@/data/projects";
 import styles from "./page.module.css";
 
 export default function HomePage() {
@@ -24,8 +20,8 @@ export default function HomePage() {
           </h1>
           <p className={styles.heroText}>
             Products, games, and tools shaped around the people who use them.
-            Here are {projectCount} projects that take very different ideas
-            from system to something real.
+            Here are {projectCount} projects that take very different ideas from
+            system to something real.
           </p>
           <div className={styles.heroActions}>
             <Link className={styles.primaryAction} href="#work">
