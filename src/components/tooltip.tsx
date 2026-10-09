@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  useEffect,
   useId,
   useRef,
   useState,
@@ -52,6 +53,38 @@ function scheduleTooltipPosition(
   window.requestAnimationFrame(updatePosition);
 }
 
+function useTooltipPosition(
+  open: boolean,
+  wrapRef: { current: HTMLSpanElement | null },
+  tooltipRef: { current: HTMLSpanElement | null },
+  setPosition: (position: TooltipPosition) => void,
+) {
+  useEffect(() => {
+    if (!open) return;
+
+    let frame: number | undefined;
+    const updatePosition = () => {
+      if (frame !== undefined) window.cancelAnimationFrame(frame);
+      frame = window.requestAnimationFrame(() => {
+        setPosition(getTooltipPosition(wrapRef.current, tooltipRef.current));
+      });
+    };
+
+    window.addEventListener("scroll", updatePosition, {
+      capture: true,
+      passive: true,
+    });
+    window.addEventListener("resize", updatePosition);
+    updatePosition();
+
+    return () => {
+      if (frame !== undefined) window.cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", updatePosition, true);
+      window.removeEventListener("resize", updatePosition);
+    };
+  }, [open, setPosition, tooltipRef, wrapRef]);
+}
+
 const technologyDescriptions: Record<string, string> = {
   "Next.js": "React framework used to build the web app and its routes.",
   TypeScript: "JavaScript with static types for safer application code.",
@@ -61,9 +94,12 @@ const technologyDescriptions: Record<string, string> = {
   "S3-compatible storage": "Object storage accessed through the S3 API.",
   "Object storage": "A way to store and retrieve files as individual objects.",
   "Node.js": "JavaScript runtime used for command-line tools and services.",
+  Express: "Node.js web framework used to serve Peerovo’s HTTP API.",
   CLI: "Command-line interface for running developer workflows.",
   WebRTC: "Browser technology for real-time audio, video, and data.",
   PeerJS: "Library that simplifies peer-to-peer WebRTC connections.",
+  coturn:
+    "STUN and TURN server used to help browsers establish WebRTC connections.",
   WebLLM: "Runs language models locally in a browser with WebGPU.",
   WebGPU: "Browser API for GPU-accelerated compute and graphics.",
   "esbuild-wasm":
@@ -80,6 +116,7 @@ export function TechnologyTooltip({ name }: TechnologyTooltipProps) {
   const [position, setPosition] = useState(initialTooltipPosition);
   const wrapRef = useRef<HTMLSpanElement>(null);
   const tooltipRef = useRef<HTMLSpanElement>(null);
+  useTooltipPosition(open, wrapRef, tooltipRef, setPosition);
   const description =
     technologyDescriptions[name] ?? "Used to build this project.";
 
@@ -112,6 +149,9 @@ export function TechnologyTooltip({ name }: TechnologyTooltipProps) {
         if (!event.currentTarget.contains(event.relatedTarget)) setOpen(false);
       }}
       onFocus={showTooltip}
+      onKeyDown={(event) => {
+        if (event.key === "Escape") setOpen(false);
+      }}
       onPointerDown={handlePointerDown}
       onPointerEnter={handlePointerEnter}
       onPointerLeave={handlePointerLeave}
@@ -154,6 +194,7 @@ export function ExternalLink({
   const [position, setPosition] = useState(initialTooltipPosition);
   const wrapRef = useRef<HTMLSpanElement>(null);
   const tooltipRef = useRef<HTMLSpanElement>(null);
+  useTooltipPosition(open, wrapRef, tooltipRef, setPosition);
   let destination = "external site";
 
   try {
@@ -176,6 +217,9 @@ export function ExternalLink({
         if (!event.currentTarget.contains(event.relatedTarget)) setOpen(false);
       }}
       onFocus={showTooltip}
+      onKeyDown={(event) => {
+        if (event.key === "Escape") setOpen(false);
+      }}
       onPointerEnter={(event) => {
         if (event.pointerType !== "touch") showTooltip();
       }}

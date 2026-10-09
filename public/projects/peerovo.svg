@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title description">
+  <title id="title">Peerovo WebRTC connection flow</title>
+  <desc id="description">An app backend authorizes a session and requests a scoped peer ticket from Peerovo. Peerovo provides signaling and ICE settings to browser peers, which connect directly or through a TURN relay.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#f3effd" />
+      <stop offset="1" stop-color="#e8f3f5" />
+    </linearGradient>
+    <linearGradient id="service" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#7042b5" />
+      <stop offset="1" stop-color="#402d6d" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="155%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#28213b" flood-opacity=".12" />
+    </filter>
+    <marker id="arrow-violet" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="m1 1 7 4-7 4" fill="none" stroke="#7547bd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" />
+    </marker>
+    <marker id="arrow-aqua" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="m1 1 7 4-7 4" fill="none" stroke="#3a9d98" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" />
+    </marker>
+    <marker id="arrow-orange" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="m1 1 7 4-7 4" fill="none" stroke="#df885e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" />
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#background)" />
+  <circle cx="1460" cy="96" r="180" fill="#d8f1ef" opacity=".5" />
+  <circle cx="145" cy="835" r="210" fill="#e4d8f8" opacity=".46" />
+  <rect x="54" y="48" width="1492" height="804" rx="28" fill="#fff" stroke="#e5e0ed" filter="url(#shadow)" />
+
+  <rect x="96" y="88" width="48" height="48" rx="15" fill="#7042b5" />
+  <circle cx="112" cy="112" r="5" fill="#fff" />
+  <circle cx="128" cy="104" r="5" fill="#9be5dc" />
+  <circle cx="128" cy="120" r="5" fill="#f1aa7f" />
+  <path d="M116 110 124 106M116 114l8 4" stroke="#fff" stroke-linecap="round" stroke-width="2" />
+  <text x="158" y="120" fill="#29213b" font-family="Arial, sans-serif" font-size="25" font-weight="700">Peerovo</text>
+  <text x="96" y="198" fill="#211a31" font-family="Georgia, 'Times New Roman', serif" font-size="48">WebRTC that fits your access model.</text>
+  <text x="98" y="237" fill="#6b6578" font-family="Arial, sans-serif" font-size="19">Your app decides who may join. Peerovo gets authorized peers connected.</text>
+  <path d="M96 268h1408" stroke="#eeeaf3" />
+
+  <g filter="url(#shadow)">
+    <rect x="96" y="328" width="350" height="362" rx="22" fill="#fbfaff" stroke="#e1dced" />
+    <rect x="122" y="354" width="46" height="46" rx="14" fill="#eee7fa" />
+    <path d="M134 374h22M145 363v22M136 366l18 16M154 366l-18 16" stroke="#6e45aa" stroke-linecap="round" stroke-width="2" />
+    <text x="183" y="382" fill="#302747" font-family="Arial, sans-serif" font-size="23" font-weight="700">Your app backend</text>
+    <text x="124" y="442" fill="#6f687d" font-family="Arial, sans-serif" font-size="17">Authenticate the user</text>
+    <path d="M124 461h294" stroke="#ebe7f1" />
+    <text x="124" y="502" fill="#6f687d" font-family="Arial, sans-serif" font-size="17">Authorize the session and peer</text>
+    <path d="M124 521h294" stroke="#ebe7f1" />
+    <rect x="122" y="552" width="298" height="92" rx="15" fill="#f0ebf8" />
+    <path d="M146 586v-7a10 10 0 0 1 20 0v7M143 586h26v25h-26z" fill="none" stroke="#6e45aa" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" />
+    <text x="184" y="585" fill="#4e3676" font-family="Arial, sans-serif" font-size="17" font-weight="700">Project key stays here</text>
+    <text x="184" y="611" fill="#746889" font-family="Arial, sans-serif" font-size="15">Server-side only</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="585" y="307" width="430" height="392" rx="24" fill="url(#service)" />
+    <circle cx="800" cy="361" r="34" fill="#fff" opacity=".14" />
+    <circle cx="788" cy="361" r="4" fill="#fff" />
+    <circle cx="812" cy="350" r="4" fill="#9be5dc" />
+    <circle cx="812" cy="372" r="4" fill="#f1aa7f" />
+    <path d="M792 359 808 352M792 363l16 7" stroke="#fff" stroke-linecap="round" stroke-width="2" />
+    <text x="800" y="422" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="27" font-weight="700">Peerovo</text>
+    <text x="800" y="450" text-anchor="middle" fill="#e1d6f1" font-family="Arial, sans-serif" font-size="16">One service. Scoped to each app.</text>
+    <path d="M622 476h356" stroke="#b9a8d4" stroke-opacity=".5" />
+    <g font-family="Arial, sans-serif">
+      <circle cx="650" cy="516" r="13" fill="#fff" opacity=".16" />
+      <path d="M645 516h10M650 511v10" stroke="#fff" stroke-linecap="round" stroke-width="2" />
+      <text x="676" y="522" fill="#fff" font-size="17" font-weight="700">Session-bound peer tickets</text>
+      <circle cx="650" cy="566" r="13" fill="#fff" opacity=".16" />
+      <path d="M644 562h12v8h-12zM647 559v3M653 559v3" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1.7" />
+      <text x="676" y="572" fill="#fff" font-size="17" font-weight="700">PeerJS signaling</text>
+      <circle cx="650" cy="616" r="13" fill="#fff" opacity=".16" />
+      <path d="M644 612h12v8h-12zM646 610v-2h8v2" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1.7" />
+      <text x="676" y="622" fill="#fff" font-size="16" font-weight="700">ICE + short-lived TURN credentials</text>
+    </g>
+    <rect x="622" y="652" width="356" height="1" fill="#b9a8d4" opacity=".5" />
+    <text x="800" y="679" text-anchor="middle" fill="#e1d6f1" font-family="Arial, sans-serif" font-size="14">Keys stay server-side. Tickets expire.</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="1154" y="328" width="350" height="362" rx="22" fill="#fbfefe" stroke="#d9eae7" />
+    <rect x="1180" y="354" width="46" height="46" rx="14" fill="#dff3ef" />
+    <rect x="1191" y="365" width="24" height="17" rx="3" fill="none" stroke="#318a84" stroke-width="2" />
+    <path d="M1197 387h12M1203 382v5" stroke="#318a84" stroke-linecap="round" stroke-width="2" />
+    <text x="1240" y="382" fill="#293d3b" font-family="Arial, sans-serif" font-size="23" font-weight="700">Browser peers</text>
+    <rect x="1181" y="425" width="296" height="59" rx="13" fill="#f4f8f7" stroke="#e1ecea" />
+    <circle cx="1208" cy="454" r="12" fill="#d9e9f4" />
+    <text x="1233" y="460" fill="#374b49" font-family="Arial, sans-serif" font-size="18" font-weight="700">Peer A</text>
+    <rect x="1181" y="502" width="296" height="59" rx="13" fill="#f4f8f7" stroke="#e1ecea" />
+    <circle cx="1208" cy="531" r="12" fill="#f5e2d4" />
+    <text x="1233" y="537" fill="#374b49" font-family="Arial, sans-serif" font-size="18" font-weight="700">Peer B</text>
+    <path d="M1421 484v18" stroke="#3a9d98" stroke-linecap="round" stroke-width="3" marker-start="url(#arrow-aqua)" marker-end="url(#arrow-aqua)" />
+    <text x="1329" y="591" text-anchor="middle" fill="#317e79" font-family="Arial, sans-serif" font-size="16" font-weight="700">Direct WebRTC when available</text>
+    <rect x="1181" y="610" width="296" height="54" rx="13" fill="#fff5ef" stroke="#f0d5c5" />
+    <path d="M1201 637h22M1212 627v20" stroke="#dc865e" stroke-linecap="round" stroke-width="2" />
+    <text x="1235" y="642" fill="#9b5d3e" font-family="Arial, sans-serif" font-size="16" font-weight="700">TURN relay when needed</text>
+  </g>
+
+  <path d="M447 490h120" fill="none" stroke="#7547bd" stroke-linecap="round" stroke-width="3" marker-end="url(#arrow-violet)" />
+  <rect x="453" y="446" width="108" height="29" rx="14" fill="#f2ecfb" />
+  <text x="507" y="466" text-anchor="middle" fill="#61418f" font-family="Arial, sans-serif" font-size="14" font-weight="700">Ticket request</text>
+
+  <path d="M1017 490h120" fill="none" stroke="#3a9d98" stroke-linecap="round" stroke-width="3" marker-end="url(#arrow-aqua)" />
+  <rect x="1024" y="446" width="104" height="29" rx="14" fill="#e5f5f2" />
+  <text x="1076" y="466" text-anchor="middle" fill="#317e79" font-family="Arial, sans-serif" font-size="14" font-weight="700">Signaling + ICE</text>
+
+  <path d="M96 745h1408" stroke="#eeeaf3" />
+  <circle cx="119" cy="791" r="9" fill="#3a9d98" />
+  <text x="140" y="798" fill="#4f5964" font-family="Arial, sans-serif" font-size="17">Media connects directly when possible.</text>
+  <circle cx="720" cy="791" r="9" fill="#df885e" />
+  <text x="741" y="798" fill="#4f5964" font-family="Arial, sans-serif" font-size="17">TURN relays it when a direct path is unavailable.</text>
+</svg>

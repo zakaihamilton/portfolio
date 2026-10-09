@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { AboutArtwork } from "@/components/about-artwork";
 import { Icon } from "@/components/icon";
 import { ExternalLink } from "@/components/tooltip";
 import { ProjectCard } from "@/components/project-card";
@@ -88,29 +89,30 @@ export default function HomePage() {
         className={styles.about}
         id="about"
       >
-        <div className={styles.aboutShape} aria-hidden="true" />
         <div className={styles.aboutCopy} data-reveal suppressHydrationWarning>
           <h2 id="about-title">
-            I like the bit <em>where it clicks.</em>
+            I turn complex ideas into <em>useful software.</em>
           </h2>
           <p>
-            I’m Zakai Hamilton. I like pulling a system apart, finding the
-            useful shape inside it, then building the details that make it feel
-            clear.
+            I’m Zakai Hamilton. I like starting with a tangled system, finding
+            the part that matters, and shaping it into something clear and
+            useful.
           </p>
           <p>
-            That has led me to strategy games, publishing tools, privacy-minded
-            analytics, identity infrastructure, and browser-based developer
-            tools.
+            That curiosity has taken me from a seed-driven strategy game to
+            privacy-first analytics, publishing and identity platforms, and
+            browser-based developer tools. Different domains, the same care for
+            how the pieces work together.
           </p>
           <ExternalLink
             className={styles.aboutLink}
             href="https://github.com/zakaihamilton"
-            label="More experiments by Zakai Hamilton on GitHub, opens in a new tab"
+            label="Explore more of Zakai Hamilton’s work on GitHub, opens in a new tab"
           >
-            More experiments on GitHub <Icon name="arrow-up-right" size={17} />
+            Explore more work <Icon name="arrow-up-right" size={17} />
           </ExternalLink>
         </div>
+        <AboutArtwork className={styles.aboutArtwork} />
       </section>
 
       <section

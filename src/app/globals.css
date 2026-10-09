@@ -88,7 +88,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 28px;
+  scroll-padding-top: 96px;
 }
 
 body {
@@ -145,5 +145,11 @@ html[data-motion="ready"] [data-reveal][data-visible="true"] {
   html[data-motion="ready"] [data-reveal] {
     transform: none !important;
     opacity: 1 !important;
+  }
+}
+
+@media (max-width: 620px) {
+  html {
+    scroll-padding-top: 86px;
   }
 }

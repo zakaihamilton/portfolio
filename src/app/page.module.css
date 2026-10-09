@@ -206,7 +206,10 @@
 }
 
 .about {
-  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
+  align-items: center;
+  gap: clamp(36px, 7vw, 92px);
   overflow: hidden;
   padding: clamp(82px, 10vw, 132px)
     max(28px, calc((100vw - var(--page-width)) / 2));
@@ -244,16 +247,18 @@
   text-decoration: none;
 }
 
-.aboutShape {
-  position: absolute;
-  top: 50%;
-  right: max(7vw, calc((100vw - var(--page-width)) / 2));
-  width: clamp(190px, 26vw, 340px);
-  aspect-ratio: 1;
-  transform: translateY(-50%) rotate(12deg);
-  border: 1px solid color-mix(in srgb, var(--orange) 55%, transparent);
-  border-radius: 39% 61% 64% 36% / 46% 40% 60% 54%;
-  background: color-mix(in srgb, var(--orange) 7%, transparent);
+.aboutArtwork {
+  width: min(100%, 460px);
+  justify-self: end;
+  animation: about-artwork-float 9s ease-in-out infinite;
+}
+
+.aboutArtwork > svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  filter: drop-shadow(0 22px 32px var(--shadow));
 }
 
 .closing {
@@ -335,6 +340,16 @@
   }
 }
 
+@keyframes about-artwork-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
 @media (min-width: 1500px) {
   .hero {
     min-height: 790px;
@@ -365,9 +380,16 @@
     max-width: 62ch;
   }
 
-  .aboutShape {
-    right: 4vw;
-    opacity: 0.55;
+  .about {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 26px;
+  }
+
+  .aboutArtwork {
+    width: min(100%, 390px);
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: end;
   }
 }
 
@@ -425,11 +447,9 @@
     padding: 74px 24px 82px;
   }
 
-  .aboutShape {
-    top: 24%;
-    right: -70px;
-    width: 220px;
-    opacity: 0.38;
+  .aboutArtwork {
+    width: min(100%, 360px);
+    justify-self: center;
   }
 
   .closing {

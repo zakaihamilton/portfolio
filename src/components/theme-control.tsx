@@ -19,11 +19,27 @@ function subscribeToTheme(callback: () => void) {
     attributes: true,
     attributeFilter: ["data-theme"],
   });
-  window.addEventListener("storage", callback);
+
+  function handleStorage(event: StorageEvent) {
+    if (event.key !== "portfolio-theme" && event.key !== null) return;
+
+    const storedTheme = event.newValue;
+    const nextTheme = themes.includes(storedTheme as Theme)
+      ? (storedTheme as Theme)
+      : "system";
+
+    if (document.documentElement.dataset.theme !== nextTheme) {
+      document.documentElement.dataset.theme = nextTheme;
+    } else {
+      callback();
+    }
+  }
+
+  window.addEventListener("storage", handleStorage);
 
   return () => {
     observer.disconnect();
-    window.removeEventListener("storage", callback);
+    window.removeEventListener("storage", handleStorage);
   };
 }
 
@@ -90,6 +106,7 @@ export function ThemeControl() {
   function selectTheme(nextTheme: Theme) {
     applyTheme(nextTheme);
     setOpen(false);
+    triggerRef.current?.focus();
   }
 
   return (
@@ -97,18 +114,26 @@ export function ThemeControl() {
       className={styles.control}
       data-open={open ? "true" : undefined}
       ref={controlRef}
+      onBlur={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget)) setOpen(false);
+      }}
     >
       <button
-        aria-controls="theme-options"
+        aria-controls={open ? "theme-options" : undefined}
         aria-describedby={tooltipId}
         aria-expanded={open}
-        aria-label="Choose color theme"
+        aria-label={`Choose color theme. Current setting: ${theme}.`}
         className={styles.trigger}
         onClick={() => setOpen((wasOpen) => !wasOpen)}
         ref={triggerRef}
         type="button"
       >
-        <Icon name="sun" size={20} />
+        <Icon
+          name={
+            theme === "system" ? "system" : theme === "dark" ? "moon" : "sun"
+          }
+          size={20}
+        />
       </button>
       <span className={styles.tooltip} id={tooltipId} role="tooltip">
         Choose System, Light, or Dark.

@@ -208,6 +208,35 @@ export const projects: Project[] = [
     repositoryUrl: "https://github.com/zakaihamilton/zakamurai",
     liveUrl: "https://zakamurai.com",
   },
+  {
+    slug: "peerovo",
+    number: "08",
+    name: "Peerovo",
+    category: "WebRTC connection service",
+    summary:
+      "Connect browser peers with session-bound tickets, PeerJS signaling, and short-lived TURN credentials.",
+    description:
+      "Peerovo gives browser apps one shared WebRTC connection service. Your backend authenticates people and decides who may join; it exchanges its server-only project key for a peer ticket bound to one project, session, and peer ID. Browsers use that ticket for PeerJS signaling and request ICE settings, including temporary TURN credentials when a direct route is unavailable.",
+    detailHeading: "Your app decides who. Peerovo connects the peers.",
+    approach:
+      "Keep identity, room membership, and peer naming in your app. Peerovo checks each ticket against the exact project, session, and peer ID, manages signaling admission and capacity, and issues short-lived coturn credentials. Project keys stay on the server, while usage summaries leave out session IDs, peer IDs, and credentials.",
+    highlights: [
+      "Issue signed tickets for an authorized project, session, and exact peer ID",
+      "Keep project API keys on your server while browsers use short-lived peer tickets",
+      "Handle PeerJS signaling and return STUN settings with temporary TURN credentials",
+      "Track service usage without logging session IDs, peer IDs, or credentials",
+    ],
+    technologies: ["Node.js", "Express", "PeerJS", "WebRTC", "coturn"],
+    image: "/projects/peerovo.svg",
+    imageAlt:
+      "Peerovo connection flow from app authorization through session-bound tickets to PeerJS signaling and browser WebRTC connections",
+    imageFit: "contain",
+    mediaTone: "paper",
+    repositoryUrl: "https://github.com/zakaihamilton/peerovo",
+    resourceUrl:
+      "https://github.com/zakaihamilton/peerovo/blob/main/docs/adding-projects.md",
+    resourceLabel: "Integration guide",
+  },
 ];
 
 export const projectCount = projects.length;
