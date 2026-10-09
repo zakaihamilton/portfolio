@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title description">
+  <title id="title">Host Present meeting room</title>
+  <desc id="description">An illustrative presenter-led meeting room with a shared stage, listening attendees, a speaking request, and host controls.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#1b2434" />
+      <stop offset="1" stop-color="#101722" />
+    </linearGradient>
+    <linearGradient id="stage" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#58638d" />
+      <stop offset="1" stop-color="#293347" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#050911" flood-opacity=".33" />
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="#e8edf4" />
+  <rect x="55" y="48" width="1490" height="804" rx="27" fill="url(#background)" filter="url(#shadow)" />
+  <path d="M55 126h1490" stroke="#344052" />
+  <rect x="88" y="75" width="38" height="38" rx="12" fill="#7160c6" />
+  <path d="M98 88h11v10h-11zM113 84h6v14h-6z" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="2" />
+  <text x="139" y="101" fill="#f1f3f8" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">Host Present</text>
+  <text x="344" y="100" fill="#9ba8ba" font-family="Inter, Arial, sans-serif" font-size="14">Presenter-led meeting</text>
+  <rect x="1281" y="73" width="221" height="42" rx="12" fill="#263246" stroke="#3a485e" />
+  <circle cx="1302" cy="94" r="5" fill="#55c39a" />
+  <text x="1318" y="99" fill="#c3cedd" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="650">EXAMPLE ROOM VIEW</text>
+
+  <rect x="87" y="153" width="1025" height="614" rx="18" fill="#202b3d" stroke="#3a465a" />
+  <rect x="108" y="174" width="983" height="516" rx="13" fill="url(#stage)" />
+  <circle cx="818" cy="393" r="249" fill="#b5b2d7" opacity=".06" />
+  <circle cx="818" cy="393" r="176" fill="#e5c6a4" opacity=".07" />
+  <text x="145" y="223" fill="#d9d7eb" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.3">PRESENTER STAGE</text>
+  <rect x="145" y="250" width="602" height="355" rx="14" fill="#f4f3ee" />
+  <rect x="145" y="250" width="602" height="54" rx="14" fill="#e9e8e3" />
+  <path d="M145 290v14h602v-14" fill="#e9e8e3" />
+  <circle cx="173" cy="277" r="5" fill="#d27f6d" /><circle cx="192" cy="277" r="5" fill="#e8bd68" /><circle cx="211" cy="277" r="5" fill="#7aaf8d" />
+  <text x="445" y="282" text-anchor="middle" fill="#7e817f" font-family="Inter, Arial, sans-serif" font-size="12">Shared screen</text>
+  <text x="184" y="358" fill="#313a4a" font-family="Georgia, 'Times New Roman', serif" font-size="31" font-weight="700">A clear stage for the idea.</text>
+  <text x="184" y="390" fill="#747c86" font-family="Inter, Arial, sans-serif" font-size="15">Camera or screen share, with the presenter in control.</text>
+  <rect x="184" y="429" width="229" height="126" rx="12" fill="#e3e8eb" />
+  <rect x="431" y="429" width="284" height="126" rx="12" fill="#e9e3d7" />
+  <path d="M210 525h178M210 499h111M210 473h142" stroke="#bdc8ce" stroke-linecap="round" stroke-width="8" />
+  <path d="M457 527h230M457 502h181M457 477h204" stroke="#c9bdab" stroke-linecap="round" stroke-width="8" />
+  <rect x="802" y="408" width="248" height="210" rx="14" fill="#172132" stroke="#75809a" stroke-width="2" />
+  <circle cx="926" cy="481" r="47" fill="#d6a47f" />
+  <path d="M881 478c4-48 83-62 94-4-10-14-21-22-39-22-20 0-35 10-55 26" fill="#242638" />
+  <path d="M847 600c4-59 37-89 79-89s75 30 79 89" fill="#536c7d" />
+  <text x="926" y="643" text-anchor="middle" fill="#e6eaf1" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="650">Presenter</text>
+  <rect x="145" y="624" width="180" height="35" rx="17" fill="#25364a" stroke="#53647a" />
+  <circle cx="165" cy="642" r="5" fill="#56c39a" />
+  <text x="180" y="647" fill="#e0e6ef" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="650">Screen and tab audio</text>
+
+  <rect x="108" y="712" width="983" height="37" rx="12" fill="#151e2b" />
+  <g font-family="Inter, Arial, sans-serif" font-size="12" font-weight="600" text-anchor="middle">
+    <rect x="405" y="718" width="42" height="26" rx="9" fill="#303b4d"/><path d="M420 725h11v9h-11zM417 727l-4-3v11l4-3" fill="none" stroke="#d1d9e5" stroke-linejoin="round" stroke-width="1.5"/>
+    <rect x="457" y="718" width="42" height="26" rx="9" fill="#303b4d"/><path d="M470 725h16v11h-16zM486 728l5-3v11l-5-3" fill="none" stroke="#d1d9e5" stroke-linejoin="round" stroke-width="1.5"/>
+    <rect x="509" y="718" width="42" height="26" rx="9" fill="#7160c6"/><path d="M522 725h16v11h-16zM526 721h8" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1.5"/>
+    <rect x="561" y="718" width="42" height="26" rx="9" fill="#303b4d"/><path d="M572 724h20v12h-20zM576 729h12" fill="none" stroke="#d1d9e5" stroke-linejoin="round" stroke-width="1.5"/>
+    <rect x="613" y="718" width="42" height="26" rx="9" fill="#713e4b"/><circle cx="634" cy="731" r="6" fill="none" stroke="#f3dce0" stroke-width="1.5"/><text x="634" y="735" fill="#fff" font-size="8">REC</text>
+  </g>
+  <text x="684" y="735" fill="#9caabe" font-family="Inter, Arial, sans-serif" font-size="12">Recording stays in the browser until saved.</text>
+
+  <rect x="1135" y="153" width="377" height="614" rx="18" fill="#202b3d" stroke="#3a465a" />
+  <text x="1163" y="194" fill="#f0f2f7" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Room controls</text>
+  <text x="1163" y="219" fill="#9ba8ba" font-family="Inter, Arial, sans-serif" font-size="13">The host sets the pace.</text>
+  <rect x="1163" y="244" width="321" height="57" rx="12" fill="#29364a" />
+  <text x="1183" y="268" fill="#e0e5ee" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="650">Guests join listening first</text>
+  <text x="1183" y="286" fill="#9ba8ba" font-family="Inter, Arial, sans-serif" font-size="12">They can ask to speak at any time.</text>
+  <text x="1163" y="340" fill="#c4cada" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">Participants</text>
+  <text x="1448" y="340" text-anchor="end" fill="#8795aa" font-family="Inter, Arial, sans-serif" font-size="12">LISTENING</text>
+  <path d="M1163 358h321" stroke="#3a465a" />
+  <circle cx="1188" cy="395" r="17" fill="#7160c6" /><text x="1188" y="400" text-anchor="middle" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700">P</text>
+  <text x="1217" y="391" fill="#e0e5ee" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="650">Presenter</text>
+  <text x="1217" y="410" fill="#9ba8ba" font-family="Inter, Arial, sans-serif" font-size="11">Host · on stage</text>
+  <circle cx="1188" cy="451" r="17" fill="#3f7381" /><text x="1188" y="456" text-anchor="middle" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700">G</text>
+  <text x="1217" y="447" fill="#e0e5ee" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="650">Guest</text>
+  <text x="1217" y="466" fill="#9ba8ba" font-family="Inter, Arial, sans-serif" font-size="11">Listening only</text>
+  <circle cx="1188" cy="507" r="17" fill="#a46a56" /><text x="1188" y="512" text-anchor="middle" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700">G</text>
+  <text x="1217" y="503" fill="#e0e5ee" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="650">Guest</text>
+  <text x="1217" y="522" fill="#e1bf85" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="650">Hand raised · review request</text>
+  <rect x="1163" y="553" width="321" height="63" rx="12" fill="#3a345e" stroke="#5e538b" />
+  <circle cx="1184" cy="584" r="7" fill="#d6a856" />
+  <text x="1201" y="580" fill="#f0eaff" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700">You decide who goes live.</text>
+  <text x="1201" y="600" fill="#c3b8dd" font-family="Inter, Arial, sans-serif" font-size="12">Approve guest camera or audio access.</text>
+  <path d="M1163 639h321" stroke="#3a465a" />
+  <rect x="1163" y="660" width="321" height="77" rx="12" fill="#192332" />
+  <text x="1183" y="690" fill="#c4cada" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700">WEBRTC ROOM</text>
+  <text x="1183" y="711" fill="#9ba8ba" font-family="Inter, Arial, sans-serif" font-size="12">Media, room chat, and reconnect tools.</text>
+</svg>

@@ -1,6 +1,7 @@
 .main {
-  width: min(900px, calc(100% - 56px));
-  min-height: 62vh;
+  position: relative;
+  width: min(940px, calc(100% - 56px));
+  min-height: 66vh;
   margin: 0 auto;
   padding: 100px 0;
   display: flex;
@@ -9,46 +10,75 @@
   flex-direction: column;
 }
 
-.kicker {
-  margin: 0;
-  color: var(--forest);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
+.main::after {
+  position: absolute;
+  right: 7%;
+  bottom: 18%;
+  width: clamp(100px, 20vw, 220px);
+  aspect-ratio: 1;
+  transform: rotate(13deg);
+  border: 1px solid color-mix(in srgb, var(--aqua) 60%, transparent);
+  border-radius: 39% 61% 64% 36% / 46% 40% 60% 54%;
+  background: color-mix(in srgb, var(--aqua) 10%, transparent);
+  content: "";
 }
 
 .main h1 {
-  margin: 18px 0 15px;
+  position: relative;
+  z-index: 1;
+  max-width: 12ch;
+  margin: 0 0 19px;
   font-family: var(--font-serif);
-  font-size: clamp(3.8rem, 10vw, 7rem);
+  font-size: clamp(3.5rem, 9vw, 6.9rem);
   font-weight: 400;
-  letter-spacing: -0.08em;
-  line-height: 0.98;
+  letter-spacing: -0.05em;
+  line-height: 1;
 }
 
-.main h1 em {
-  color: var(--forest);
-  font-weight: 400;
-}
-
-.main > p:not(.kicker) {
-  max-width: 42ch;
-  margin: 0 0 25px;
+.main > p {
+  position: relative;
+  z-index: 1;
+  max-width: 44ch;
+  margin: 0 0 27px;
   color: var(--muted);
+  font-size: 1.125rem;
   line-height: 1.7;
 }
 
 .main a {
-  color: var(--forest);
-  font-size: 0.84rem;
-  font-weight: 650;
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  min-height: 50px;
+  align-items: center;
+  gap: 9px;
+  padding: 0 19px;
+  border-radius: 999px;
+  background: var(--violet);
+  color: var(--on-violet);
+  font-size: 1rem;
+  font-weight: 700;
   text-decoration: none;
+  transition:
+    background-color 150ms ease,
+    transform 150ms ease;
+}
+
+.main a:hover {
+  transform: translateY(-2px);
+  background: var(--aqua);
+  color: var(--on-aqua);
 }
 
 @media (max-width: 560px) {
   .main {
     width: calc(100% - 36px);
     min-height: 68vh;
+  }
+
+  .main::after {
+    right: 2%;
+    bottom: 15%;
+    opacity: 0.55;
   }
 }

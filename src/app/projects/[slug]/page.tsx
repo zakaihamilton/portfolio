@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Icon } from "@/components/icon";
+import { ExternalLink, TechnologyTooltip } from "@/components/tooltip";
 import { ProjectVisual } from "@/components/project-visual";
-import {
-  formattedProjectCount,
-  getProject,
-  getProjectNeighbors,
-  projects,
-} from "@/data/projects";
+import { getProject, getProjectNeighbors, projects } from "@/data/projects";
 import styles from "./page.module.css";
 
 type ProjectPageProps = {
@@ -51,102 +48,106 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   return (
     <main className={styles.main} id="main-content">
-      <div className={styles.topline}>
-        <Link href="/#work">
-          <span aria-hidden="true">←</span> All projects
-        </Link>
-        <span>
-          PROJECT {project.number} <span aria-hidden="true">/</span>{" "}
-          {formattedProjectCount}
-        </span>
-      </div>
+      <Link className={styles.backLink} href="/#work">
+        <Icon name="arrow-left" size={18} /> Browse all projects
+      </Link>
 
-      <section aria-labelledby="project-title" className={styles.intro}>
+      <section
+        aria-labelledby="project-title"
+        className={styles.intro}
+        data-reveal
+        suppressHydrationWarning
+      >
         <p className={styles.category}>{project.category}</p>
         <h1 id="project-title">{project.name}</h1>
         <p className={styles.summary}>{project.summary}</p>
         <p className={styles.description}>{project.description}</p>
         <div className={styles.links}>
           {project.liveUrl ? (
-            <a
+            <ExternalLink
               className={styles.primaryLink}
               href={project.liveUrl}
-              rel="noreferrer"
-              target="_blank"
+              label={`Open ${project.name}, opens in a new tab`}
             >
-              Visit live project <span aria-hidden="true">↗</span>
-            </a>
+              Open the project <Icon name="arrow-up-right" size={17} />
+            </ExternalLink>
           ) : null}
-          <a
+          <ExternalLink
             className={project.liveUrl ? styles.textLink : styles.primaryLink}
             href={project.repositoryUrl}
-            rel="noreferrer"
-            target="_blank"
+            label={`${project.name} source code on GitHub, opens in a new tab`}
           >
-            View source on GitHub <span aria-hidden="true">↗</span>
-          </a>
+            See the code <Icon name="arrow-up-right" size={17} />
+          </ExternalLink>
           {project.resourceUrl && project.resourceLabel ? (
-            <a
+            <ExternalLink
               className={styles.textLink}
               href={project.resourceUrl}
-              rel="noreferrer"
-              target="_blank"
+              label={`${project.resourceLabel}, opens in a new tab`}
             >
-              {project.resourceLabel} <span aria-hidden="true">↗</span>
-            </a>
+              {project.resourceLabel} <Icon name="arrow-up-right" size={17} />
+            </ExternalLink>
           ) : null}
         </div>
       </section>
 
-      <div className={styles.visualWrap}>
+      <div className={styles.visualWrap} data-reveal suppressHydrationWarning>
         <ProjectVisual project={project} variant="detail" priority />
-        <span className={styles.imageNumber}>
-          {project.number} / {formattedProjectCount}
-        </span>
       </div>
 
-      <section aria-labelledby="details-title" className={styles.details}>
+      <section
+        aria-labelledby="details-title"
+        className={styles.details}
+        data-reveal
+        suppressHydrationWarning
+      >
         <div className={styles.detailIntro}>
-          <p className={styles.category}>How it works</p>
           <h2 id="details-title">{project.detailHeading}</h2>
           <p>{project.approach}</p>
         </div>
         <div className={styles.highlights}>
-          <h3>What it does</h3>
+          <h3>Highlights</h3>
           <ul>
             {project.highlights.map((highlight) => (
               <li key={highlight}>
-                <span aria-hidden="true">✳</span>
+                <Icon name="spark" size={16} />
                 {highlight}
               </li>
             ))}
           </ul>
           <div className={styles.stack}>
-            <h3>Made with</h3>
+            <h3>Built with</h3>
             <ul aria-label="Technologies used">
               {project.technologies.map((technology) => (
-                <li key={technology}>{technology}</li>
+                <li key={technology}>
+                  <TechnologyTooltip name={technology} />
+                </li>
               ))}
             </ul>
           </div>
         </div>
       </section>
 
-      <section aria-label="More projects" className={styles.moreProjects}>
+      <section
+        aria-labelledby="more-title"
+        className={styles.moreProjects}
+        data-reveal
+        suppressHydrationWarning
+      >
         <div className={styles.moreHeading}>
-          <p className={styles.category}>Continue browsing</p>
+          <h2 id="more-title">Keep exploring</h2>
           <Link href="/#work">
-            View all projects <span aria-hidden="true">↗</span>
+            All projects <Icon name="arrow-up-right" size={17} />
           </Link>
         </div>
         <div className={styles.neighbors}>
           {neighbors.previous ? (
             <Link
               className={styles.neighbor}
-              href={"/projects/" + neighbors.previous.slug}
+              href={`/projects/${neighbors.previous.slug}`}
             >
               <span className={styles.neighborLabel}>
-                <span aria-hidden="true">←</span> Previous project
+                <Icon name="arrow-left" size={17} /> Previous
               </span>
               <span className={styles.neighborName}>
                 {neighbors.previous.name}
@@ -158,10 +159,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           {neighbors.next ? (
             <Link
               className={[styles.neighbor, styles.next].join(" ")}
-              href={"/projects/" + neighbors.next.slug}
+              href={`/projects/${neighbors.next.slug}`}
             >
               <span className={styles.neighborLabel}>
-                Next project <span aria-hidden="true">→</span>
+                Next <Icon name="arrow-right" size={17} />
               </span>
               <span className={styles.neighborName}>{neighbors.next.name}</span>
             </Link>

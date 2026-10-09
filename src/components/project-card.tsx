@@ -1,5 +1,7 @@
 import Link from "next/link";
+import { Icon } from "@/components/icon";
 import type { Project } from "@/data/projects";
+import { ExternalLink, TechnologyTooltip } from "@/components/tooltip";
 import { ProjectVisual } from "./project-visual";
 import styles from "./project-card.module.css";
 
@@ -11,39 +13,43 @@ export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <article className={styles.card}>
       <Link
-        aria-label={"Read about " + project.name}
+        aria-label={`See how ${project.name} works`}
         className={styles.visualLink}
-        href={"/projects/" + project.slug}
+        href={`/projects/${project.slug}`}
       >
         <ProjectVisual project={project} variant="card" />
-        <span className={styles.visualIndex}>{project.number}</span>
       </Link>
       <div className={styles.body}>
-        <div className={styles.meta}>
-          <span>{project.category}</span>
-          <span aria-hidden="true">—</span>
-          <span>{project.technologies[0]}</span>
-        </div>
+        <p className={styles.category}>{project.category}</p>
         <h3>
-          <Link href={"/projects/" + project.slug}>{project.name}</Link>
+          <Link href={`/projects/${project.slug}`}>{project.name}</Link>
         </h3>
-        <p>{project.summary}</p>
+        <p className={styles.summary}>{project.summary}</p>
+        <ul
+          aria-label={`${project.name} technologies`}
+          className={styles.technologies}
+        >
+          {project.technologies.map((technology) => (
+            <li key={technology}>
+              <TechnologyTooltip name={technology} />
+            </li>
+          ))}
+        </ul>
         <div className={styles.actions}>
           <Link
             className={styles.detailLink}
-            href={"/projects/" + project.slug}
+            href={`/projects/${project.slug}`}
           >
-            Explore project <span aria-hidden="true">↗</span>
+            See how it works <Icon name="arrow-up-right" size={17} />
           </Link>
           {project.liveUrl ? (
-            <a
+            <ExternalLink
               className={styles.liveLink}
               href={project.liveUrl}
-              rel="noreferrer"
-              target="_blank"
+              label={`Open ${project.name}, opens in a new tab`}
             >
-              Live site
-            </a>
+              Try it <Icon name="arrow-up-right" size={17} />
+            </ExternalLink>
           ) : null}
         </div>
       </div>

@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title description">
+  <title id="title">Zakamurai browser IDE</title>
+  <desc id="description">An illustrative Zakamurai workspace with a project file tree, code editor, build controls, reviewable AI changes, and a live preview.</desc>
+  <defs>
+    <linearGradient id="app" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#20212b" />
+      <stop offset="1" stop-color="#12151b" />
+    </linearGradient>
+    <linearGradient id="preview" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#f6f4ff" />
+      <stop offset="1" stop-color="#e8e4ff" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#08090c" flood-opacity=".27" />
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="#e7e5f0" />
+  <rect x="52" y="48" width="1496" height="804" rx="25" fill="url(#app)" filter="url(#shadow)" />
+  <path d="M52 121h1496" stroke="#30343d" />
+  <rect x="78" y="68" width="39" height="39" rx="12" fill="#7053d1" />
+  <text x="97.5" y="94" text-anchor="middle" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800">Z</text>
+  <text x="128" y="95" fill="#f2f1f6" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="750">ZAKAMURAI</text>
+  <rect x="334" y="70" width="190" height="35" rx="9" fill="#282b34" />
+  <text x="354" y="93" fill="#d5d7df" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="650">starter-app</text>
+  <rect x="1250" y="65" width="108" height="43" rx="11" fill="#7356dc" />
+  <path d="m1271 79 13 7-13 7z" fill="#fff" />
+  <text x="1292" y="92" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">Build</text>
+  <rect x="1371" y="65" width="146" height="43" rx="11" fill="#282b34" stroke="#3b404b" />
+  <path d="m1392 80-6 7 6 7m12-14 6 7-6 7" fill="none" stroke="#aeb4c2" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" />
+  <text x="1418" y="92" fill="#c8cbd5" font-family="Inter, Arial, sans-serif" font-size="13">Code · Preview</text>
+
+  <rect x="52" y="121" width="263" height="731" fill="#191d24" />
+  <path d="M315 121v731" stroke="#30343d" />
+  <text x="82" y="157" fill="#8991a0" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1">PROJECT FILES</text>
+  <rect x="77" y="176" width="214" height="38" rx="9" fill="#242831" />
+  <circle cx="95" cy="195" r="5" fill="#66cba8" />
+  <text x="110" y="200" fill="#d8dbe4" font-family="Inter, Arial, sans-serif" font-size="13">starter-app</text>
+  <path d="m95 232 5 5-5 5" fill="none" stroke="#858e9d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" />
+  <rect x="113" y="232" width="15" height="13" rx="3" fill="none" stroke="#71a0e6" stroke-width="1.5" />
+  <text x="139" y="244" fill="#b9c0cd" font-family="Inter, Arial, sans-serif" font-size="13">src</text>
+  <path d="m120 262 4 4-4 4" fill="none" stroke="#788292" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+  <rect x="136" y="261" width="13" height="16" rx="2" fill="none" stroke="#dfba74" stroke-width="1.4" />
+  <text x="160" y="274" fill="#edeef2" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="650">App.tsx</text>
+  <rect x="76" y="284" width="215" height="33" rx="8" fill="#302a49" />
+  <path d="m95 294 5 5-5 5m10 0h8" fill="none" stroke="#c3afff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+  <text x="125" y="306" fill="#e5ddff" font-family="Inter, Arial, sans-serif" font-size="13">styles.css</text>
+  <rect x="113" y="332" width="14" height="16" rx="2" fill="none" stroke="#dfba74" stroke-width="1.4" />
+  <text x="139" y="345" fill="#b9c0cd" font-family="Inter, Arial, sans-serif" font-size="13">package.json</text>
+  <path d="M78 377h211" stroke="#30343d" />
+  <text x="82" y="408" fill="#8991a0" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1">WORKSPACE</text>
+  <rect x="78" y="426" width="211" height="54" rx="11" fill="#20272d" stroke="#36443f" />
+  <circle cx="98" cy="453" r="6" fill="#58bd94" />
+  <text x="115" y="449" fill="#d7e0dc" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="650">Saved on this device</text>
+  <text x="115" y="468" fill="#8fa69c" font-family="Inter, Arial, sans-serif" font-size="11">Export project as ZIP</text>
+
+  <rect x="315" y="121" width="700" height="731" fill="#171a20" />
+  <path d="M315 166h700" stroke="#30343d" />
+  <rect x="338" y="133" width="162" height="33" rx="8" fill="#282b34" />
+  <path d="M355 144h13v13h-13zM358 140h13v13" fill="none" stroke="#82adf5" stroke-width="1.5" />
+  <text x="379" y="154" fill="#e4e6ec" font-family="Inter, Arial, sans-serif" font-size="12">App.tsx</text>
+  <text x="343" y="205" fill="#697383" font-family="ui-monospace, SFMono-Regular, monospace" font-size="13">1</text>
+  <text x="380" y="205" fill="#cf9cff" font-family="ui-monospace, SFMono-Regular, monospace" font-size="14">import</text>
+  <text x="439" y="205" fill="#d7dbe4" font-family="ui-monospace, SFMono-Regular, monospace" font-size="14"> React from </text>
+  <text x="544" y="205" fill="#a8d49a" font-family="ui-monospace, SFMono-Regular, monospace" font-size="14">&quot;react&quot;</text>
+  <text x="343" y="240" fill="#697383" font-family="ui-monospace, SFMono-Regular, monospace" font-size="13">2</text>
+  <text x="380" y="240" fill="#cf9cff" font-family="ui-monospace, SFMono-Regular, monospace" font-size="14">import</text>
+  <text x="439" y="240" fill="#d7dbe4" font-family="ui-monospace, SFMono-Regular, monospace" font-size="14"> { Sparkles } from </text>
+  <text x="603" y="240" fill="#a8d49a" font-family="ui-monospace, SFMono-Regular, monospace" font-size="14">&quot;./icons&quot;</text>
+  <text x="343" y="275" fill="#697383" font-family="ui-monospace, SFMono-Regular, monospace" font-size="13">3</text>
+  <text x="343" y="310" fill="#697383" font-family="ui-monospace, SFMono-Regular, monospace" font-size="13">4</text>
+  <text x="380" y="310" fill="#cf9cff" font-family="ui-monospace, SFMono-Regular, monospace" font-size="14">export default function</text>
+  <text x="586" y="310" fill="#84c9ef" font-family="ui-monospace, SFMono-Regular, monospace" font-size="14">App</text>
+  <text x="619" y="310" fill="#d7dbe4" font-family="ui-monospace, SFMono-Regular, monospace" font-size="14">() {</text>
+  <text x="343" y="345" fill="#697383" font-family="ui-monospace, SFMono-Regular, monospace" font-size="13">5</text>
+  <text x="402" y="345" fill="#d7dbe4" font-family="ui-monospace, SFMono-Regular, monospace" font-size="14">return (</text>
+  <text x="343" y="380" fill="#697383" font-family="ui-monospace, SFMono-Regular, monospace" font-size="13">6</text>
+  <rect x="374" y="388" width="536" height="31" rx="6" fill="#20332c" />
+  <text x="402" y="410" fill="#78d5a9" font-family="ui-monospace, SFMono-Regular, monospace" font-size="14">+  &lt;main className=&quot;workspace&quot;&gt;</text>
+  <text x="343" y="450" fill="#697383" font-family="ui-monospace, SFMono-Regular, monospace" font-size="13">7</text>
+  <text x="432" y="450" fill="#d7dbe4" font-family="ui-monospace, SFMono-Regular, monospace" font-size="14">&lt;h1&gt;Make the next thing real.&lt;/h1&gt;</text>
+  <text x="343" y="485" fill="#697383" font-family="ui-monospace, SFMono-Regular, monospace" font-size="13">8</text>
+  <text x="402" y="485" fill="#d7dbe4" font-family="ui-monospace, SFMono-Regular, monospace" font-size="14">&lt;Sparkles /&gt;</text>
+  <text x="343" y="520" fill="#697383" font-family="ui-monospace, SFMono-Regular, monospace" font-size="13">9</text>
+  <text x="402" y="520" fill="#d7dbe4" font-family="ui-monospace, SFMono-Regular, monospace" font-size="14">&lt;/main&gt;</text>
+  <text x="343" y="555" fill="#697383" font-family="ui-monospace, SFMono-Regular, monospace" font-size="13">10</text>
+  <text x="380" y="555" fill="#d7dbe4" font-family="ui-monospace, SFMono-Regular, monospace" font-size="14">)</text>
+  <text x="343" y="590" fill="#697383" font-family="ui-monospace, SFMono-Regular, monospace" font-size="13">11</text>
+  <text x="380" y="590" fill="#d7dbe4" font-family="ui-monospace, SFMono-Regular, monospace" font-size="14">}</text>
+  <rect x="339" y="661" width="653" height="147" rx="13" fill="#1d222a" stroke="#343942" />
+  <circle cx="361" cy="688" r="5" fill="#a98df5" />
+  <text x="376" y="693" fill="#c9c1de" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700">AI CHANGE · REVIEW BEFORE APPROVAL</text>
+  <text x="361" y="726" fill="#aeb5c1" font-family="Inter, Arial, sans-serif" font-size="13">Build and preview use the proposed code. Approve to keep it, or undo to revert.</text>
+  <rect x="361" y="750" width="112" height="36" rx="9" fill="#7356dc" />
+  <text x="385" y="773" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700">Approve diff</text>
+  <rect x="485" y="750" width="90" height="36" rx="9" fill="#2c3039" stroke="#414752" />
+  <text x="509" y="773" fill="#c6cad3" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="650">Undo</text>
+
+  <rect x="1015" y="121" width="533" height="731" fill="#20232b" />
+  <path d="M1015 166h533" stroke="#30343d" />
+  <rect x="1038" y="133" width="115" height="33" rx="8" fill="#302a49" />
+  <circle cx="1058" cy="149" r="5" fill="#88d3ad" />
+  <text x="1073" y="154" fill="#e7e0ff" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="650">Live preview</text>
+  <rect x="1041" y="188" width="480" height="583" rx="14" fill="url(#preview)" />
+  <rect x="1041" y="188" width="480" height="42" rx="14" fill="#fff" />
+  <path d="M1041 216v14h480v-14" fill="#fff" />
+  <circle cx="1062" cy="209" r="4" fill="#d17d75" /><circle cx="1077" cy="209" r="4" fill="#e1bb6b" /><circle cx="1092" cy="209" r="4" fill="#7cb78d" />
+  <text x="1281" y="214" text-anchor="middle" fill="#77798a" font-family="Inter, Arial, sans-serif" font-size="11">localhost · preview</text>
+  <rect x="1072" y="261" width="418" height="426" rx="17" fill="#fff" />
+  <rect x="1102" y="289" width="39" height="39" rx="12" fill="#eee9ff" />
+  <path d="m1111 308 7-10 5 7 7-9" fill="none" stroke="#7053d1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+  <text x="1102" y="373" fill="#29283a" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="750">Make the next</text>
+  <text x="1102" y="411" fill="#7053d1" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="750">thing real.</text>
+  <text x="1102" y="447" fill="#737486" font-family="Inter, Arial, sans-serif" font-size="14">Shape the idea, test the change, and see</text>
+  <text x="1102" y="469" fill="#737486" font-family="Inter, Arial, sans-serif" font-size="14">what it becomes—all in one place.</text>
+  <rect x="1102" y="495" width="151" height="42" rx="11" fill="#7053d1" />
+  <text x="1123" y="522" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700">Start building</text>
+  <rect x="1102" y="564" width="356" height="94" rx="13" fill="#f5f3fb" />
+  <circle cx="1130" cy="594" r="10" fill="#85c8aa" />
+  <path d="m1125 594 4 4 7-8" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+  <text x="1151" y="598" fill="#36364a" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700">Build complete</text>
+  <text x="1151" y="620" fill="#7e7d91" font-family="Inter, Arial, sans-serif" font-size="12">Runtime logs are ready to inspect.</text>
+  <rect x="1041" y="790" width="480" height="34" rx="9" fill="#191c22" />
+  <circle cx="1060" cy="807" r="4" fill="#63c99b" />
+  <text x="1074" y="811" fill="#9ea7b5" font-family="Inter, Arial, sans-serif" font-size="11">Browser storage · Local AI when supported · Export as ZIP</text>
+</svg>

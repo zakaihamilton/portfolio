@@ -1,4 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="32" fill="#28594c"/>
-  <text x="32" y="42" fill="#f5f2eb" font-family="Georgia,serif" font-size="27" text-anchor="middle" letter-spacing="-3">ZH</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="face" x1="16" y1="6" x2="57" y2="46" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B66DFF" />
+      <stop offset="1" stop-color="#6D28D9" />
+    </linearGradient>
+    <linearGradient id="depth" x1="31" y1="20" x2="17" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#762CC4" />
+      <stop offset="1" stop-color="#35105F" />
+    </linearGradient>
+    <path id="z-face" d="M16 6h41v10L36 36h21v10H16V36l21-20H16z" />
+  </defs>
+
+  <g transform="translate(32 32) rotate(-16) scale(0.9) translate(-32 -32)">
+  <!-- The back face shifts left and down to show isometric depth. -->
+  <use href="#z-face" transform="translate(-9 7)" fill="#35105F" />
+  <path d="M16 16V6L7 13v10z" fill="#57209A" />
+  <path d="M16 36 37 16l-9 7L7 43z" fill="url(#depth)" />
+  <path d="M16 46V36l-9 7v10z" fill="#4A197E" />
+  <path d="M57 46H16l-9 7h41z" fill="#35105F" />
+
+  <!-- The front face stays outlined in white for clarity at favicon sizes. -->
+  <use href="#z-face" fill="url(#face)" stroke="#fff" stroke-linejoin="round" stroke-width="3.5" />
+  </g>
 </svg>

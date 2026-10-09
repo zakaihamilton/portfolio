@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title description">
+  <title id="title">Visitoring analytics dashboard</title>
+  <desc id="description">A sample analytics dashboard with page views, visitors, activity over time, traffic sources, and privacy indicators.</desc>
+  <defs>
+    <linearGradient id="backdrop" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#153b35" />
+      <stop offset="1" stop-color="#0d2424" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#071817" flood-opacity=".25" />
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="#e9f0ec" />
+  <rect x="55" y="52" width="1490" height="796" rx="28" fill="url(#backdrop)" />
+  <rect x="96" y="92" width="1408" height="716" rx="18" fill="#f8faf8" filter="url(#shadow)" />
+  <path d="M354 92h1132a18 18 0 0 1 18 18v680a18 18 0 0 1-18 18H354z" fill="#f8faf8" />
+  <path d="M114 92h240v716H114a18 18 0 0 1-18-18V110a18 18 0 0 1 18-18" fill="#eef4f0" />
+  <path d="M354 92v716" stroke="#dfe9e3" />
+
+  <rect x="132" y="126" width="34" height="34" rx="11" fill="#28795f" />
+  <path d="m140 135 8 17 10-18" fill="none" stroke="#f4fbf6" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" />
+  <text x="179" y="151" fill="#163d34" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">Visitoring</text>
+  <text x="132" y="217" fill="#7d9188" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="1.5">WORKSPACE</text>
+  <rect x="119" y="235" width="210" height="48" rx="12" fill="#dcece4" />
+  <circle cx="143" cy="259" r="6" fill="#28795f" />
+  <text x="161" y="265" fill="#1c5b48" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="650">Overview</text>
+  <circle cx="143" cy="316" r="5" fill="#9baca4" />
+  <text x="161" y="322" fill="#536b61" font-family="Inter, Arial, sans-serif" font-size="16">Pages</text>
+  <circle cx="143" cy="370" r="5" fill="#9baca4" />
+  <text x="161" y="376" fill="#536b61" font-family="Inter, Arial, sans-serif" font-size="16">Events</text>
+  <circle cx="143" cy="424" r="5" fill="#9baca4" />
+  <text x="161" y="430" fill="#536b61" font-family="Inter, Arial, sans-serif" font-size="16">Traffic sources</text>
+  <circle cx="143" cy="478" r="5" fill="#9baca4" />
+  <text x="161" y="484" fill="#536b61" font-family="Inter, Arial, sans-serif" font-size="16">Settings</text>
+  <rect x="120" y="730" width="208" height="49" rx="13" fill="#e1eee8" />
+  <circle cx="145" cy="754" r="7" fill="#28795f" />
+  <text x="163" y="751" fill="#335d4e" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700">PRIVACY BY DESIGN</text>
+  <text x="163" y="769" fill="#71857b" font-family="Inter, Arial, sans-serif" font-size="12">No cookies. No stored IPs.</text>
+
+  <text x="397" y="145" fill="#78877f" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="600">Visitoring  /  Overview</text>
+  <text x="397" y="196" fill="#17372f" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700">Marketing site</text>
+  <text x="397" y="222" fill="#718079" font-family="Inter, Arial, sans-serif" font-size="15">A clear read on what brings people in and what they do next.</text>
+  <rect x="1280" y="127" width="174" height="43" rx="12" fill="#f0f5f2" stroke="#dce6e0" />
+  <text x="1300" y="154" fill="#536b60" font-family="Inter, Arial, sans-serif" font-size="14">Last 7 days</text>
+  <path d="m1427 145 6 6 6-6" fill="none" stroke="#7a8e84" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+  <rect x="1380" y="183" width="74" height="25" rx="12" fill="#fff0dd" />
+  <text x="1393" y="200" fill="#a76525" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing=".8">SAMPLE DATA</text>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="397" y="248" width="333" height="128" rx="15" fill="#fff" stroke="#e2eae5" />
+    <text x="419" y="279" fill="#78877f" font-size="14">Page views</text>
+    <text x="419" y="331" fill="#17372f" font-size="34" font-weight="700">12,480</text>
+    <text x="634" y="330" fill="#328566" font-size="14" font-weight="700">↗ 18.4%</text>
+    <text x="419" y="356" fill="#a0aaa4" font-size="12">compared with previous period</text>
+
+    <rect x="748" y="248" width="333" height="128" rx="15" fill="#fff" stroke="#e2eae5" />
+    <text x="770" y="279" fill="#78877f" font-size="14">Visitors</text>
+    <text x="770" y="331" fill="#17372f" font-size="34" font-weight="700">4,210</text>
+    <text x="963" y="330" fill="#328566" font-size="14" font-weight="700">↗ 12.6%</text>
+    <text x="770" y="356" fill="#a0aaa4" font-size="12">compared with previous period</text>
+
+    <rect x="1099" y="248" width="355" height="128" rx="15" fill="#eaf4ee" stroke="#d9e9df" />
+    <text x="1122" y="279" fill="#718079" font-size="14">Collection choices</text>
+    <text x="1122" y="317" fill="#1b624b" font-size="20" font-weight="700">Only the useful bits.</text>
+    <text x="1122" y="347" fill="#58766a" font-size="13">Broad trends, with less personal data.</text>
+  </g>
+
+  <rect x="397" y="402" width="704" height="331" rx="16" fill="#fff" stroke="#e2eae5" />
+  <text x="422" y="440" fill="#17372f" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Activity over time</text>
+  <text x="422" y="465" fill="#8a9991" font-family="Inter, Arial, sans-serif" font-size="13">Page views across the selected period</text>
+  <path d="M444 667H1062M444 614H1062M444 561H1062M444 508H1062" stroke="#edf1ee" />
+  <path d="M447 607 528 574 610 591 692 527 774 548 856 498 938 529 1022 478" fill="none" stroke="#348466" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" />
+  <path d="M447 607 528 574 610 591 692 527 774 548 856 498 938 529 1022 478 1022 668 447 668Z" fill="#dcefe5" opacity=".72" />
+  <path d="M447 607 528 574 610 591 692 527 774 548 856 498 938 529 1022 478" fill="none" stroke="#348466" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" />
+  <g fill="#fff" stroke="#348466" stroke-width="3">
+    <circle cx="447" cy="607" r="5"/><circle cx="528" cy="574" r="5"/><circle cx="610" cy="591" r="5"/><circle cx="692" cy="527" r="5"/>
+    <circle cx="774" cy="548" r="5"/><circle cx="856" cy="498" r="5"/><circle cx="938" cy="529" r="5"/><circle cx="1022" cy="478" r="5"/>
+  </g>
+  <g fill="#8a9991" font-family="Inter, Arial, sans-serif" font-size="12">
+    <text x="443" y="697">Mon</text><text x="525" y="697">Tue</text><text x="607" y="697">Wed</text><text x="689" y="697">Thu</text>
+    <text x="771" y="697">Fri</text><text x="853" y="697">Sat</text><text x="935" y="697">Sun</text><text x="1014" y="697">Today</text>
+  </g>
+
+  <rect x="1119" y="402" width="335" height="331" rx="16" fill="#fff" stroke="#e2eae5" />
+  <text x="1144" y="440" fill="#17372f" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Traffic sources</text>
+  <text x="1144" y="465" fill="#8a9991" font-family="Inter, Arial, sans-serif" font-size="13">Where visits came from</text>
+  <g font-family="Inter, Arial, sans-serif" font-size="14">
+    <text x="1144" y="516" fill="#536b60">Direct</text><rect x="1144" y="529" width="258" height="9" rx="4.5" fill="#edf2ef"/><rect x="1144" y="529" width="190" height="9" rx="4.5" fill="#348466"/>
+    <text x="1144" y="574" fill="#536b60">Search</text><rect x="1144" y="587" width="258" height="9" rx="4.5" fill="#edf2ef"/><rect x="1144" y="587" width="147" height="9" rx="4.5" fill="#65a78d"/>
+    <text x="1144" y="632" fill="#536b60">Referrals</text><rect x="1144" y="645" width="258" height="9" rx="4.5" fill="#edf2ef"/><rect x="1144" y="645" width="94" height="9" rx="4.5" fill="#a9cdb8"/>
+  </g>
+  <path d="M397 760h1057" stroke="#e3eae5" />
+  <circle cx="414" cy="784" r="5" fill="#328566" />
+  <text x="428" y="789" fill="#72837a" font-family="Inter, Arial, sans-serif" font-size="13">Sample project · private analytics for the sites you run</text>
+</svg>

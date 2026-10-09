@@ -1,0 +1,76 @@
+.wrap {
+  position: relative;
+  display: inline-flex;
+  min-width: 0;
+}
+
+.technology {
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  font-size: 1rem;
+  line-height: 1.35;
+  cursor: help;
+  transition:
+    border-color 160ms ease,
+    background-color 160ms ease,
+    transform 160ms ease;
+}
+
+.technology:hover,
+.wrap[data-open="true"] .technology {
+  transform: translateY(-1px);
+  border-color: var(--violet);
+  background: var(--violet-soft);
+}
+
+.tooltip {
+  position: fixed;
+  z-index: 15;
+  top: 16px;
+  left: 16px;
+  width: max-content;
+  max-width: min(280px, calc(100vw - 32px));
+  padding: 9px 12px;
+  transform: translateY(-4px);
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  background: var(--tooltip-bg);
+  box-shadow: 0 8px 24px var(--shadow);
+  color: var(--tooltip-ink);
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: left;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 130ms ease,
+    transform 130ms ease,
+    visibility 130ms;
+}
+
+.wrap[data-open="true"] .tooltip {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .technology,
+  .tooltip {
+    transition: none;
+  }
+
+  .technology:hover,
+  .wrap[data-open="true"] .technology {
+    transform: none;
+  }
+}

@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title description">
+  <title id="title">Perminister shared identity and access</title>
+  <desc id="description">A product architecture diagram showing shared accounts, organization membership, and scoped grants connecting Visitoring and PostParticle while each app keeps its own data.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#f4f2fb" />
+      <stop offset="1" stop-color="#e8eef7" />
+    </linearGradient>
+    <linearGradient id="identity" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#7144a8" />
+      <stop offset="1" stop-color="#493274" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="13" stdDeviation="18" flood-color="#263349" flood-opacity=".14" />
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#background)" />
+  <rect x="58" y="52" width="1484" height="796" rx="27" fill="#fff" stroke="#e0e4ef" />
+  <rect x="99" y="95" width="39" height="39" rx="12" fill="#7144a8" />
+  <path d="M111 121v-17h7l5 8 5-8h7v17" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" />
+  <text x="151" y="122" fill="#292b3a" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">Perminister</text>
+  <text x="352" y="121" fill="#7e8291" font-family="Inter, Arial, sans-serif" font-size="15">Shared identity. Product-specific access.</text>
+  <rect x="1306" y="96" width="190" height="38" rx="19" fill="#f1edf8" />
+  <circle cx="1327" cy="115" r="5" fill="#7144a8" />
+  <text x="1341" y="120" fill="#5c3b86" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing=".8">ACCESS MODEL</text>
+  <path d="M99 160h1397" stroke="#ececf2" />
+
+  <text x="102" y="210" fill="#8a8d9a" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="1.1">PEOPLE &amp; TEAMS</text>
+  <text x="1260" y="210" fill="#8a8d9a" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="1.1">CONNECTED PRODUCTS</text>
+
+  <rect x="101" y="239" width="337" height="419" rx="18" fill="#f8f9fc" stroke="#e0e4ef" filter="url(#shadow)" />
+  <text x="130" y="281" fill="#303445" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="700">An organization</text>
+  <text x="130" y="306" fill="#818696" font-family="Inter, Arial, sans-serif" font-size="13">One team, with clear membership.</text>
+  <rect x="130" y="332" width="279" height="64" rx="12" fill="#fff" stroke="#e7e9f0" />
+  <circle cx="158" cy="364" r="17" fill="#f7d9c6" /><text x="152" y="369" fill="#8b513f" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700">A</text>
+  <text x="186" y="359" fill="#36394a" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="650">Account owner</text>
+  <text x="186" y="378" fill="#8a8d9a" font-family="Inter, Arial, sans-serif" font-size="12">Admin · organization</text>
+  <rect x="130" y="408" width="279" height="64" rx="12" fill="#fff" stroke="#e7e9f0" />
+  <circle cx="158" cy="440" r="17" fill="#d9e8f4" /><text x="152" y="445" fill="#3f6884" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700">M</text>
+  <text x="186" y="435" fill="#36394a" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="650">Member</text>
+  <text x="186" y="454" fill="#8a8d9a" font-family="Inter, Arial, sans-serif" font-size="12">Invited to the team</text>
+  <rect x="130" y="484" width="279" height="64" rx="12" fill="#fff" stroke="#e7e9f0" />
+  <circle cx="158" cy="516" r="17" fill="#dcebdc" /><text x="152" y="521" fill="#4b7553" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700">E</text>
+  <text x="186" y="511" fill="#36394a" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="650">Product editor</text>
+  <text x="186" y="530" fill="#8a8d9a" font-family="Inter, Arial, sans-serif" font-size="12">Granted access by scope</text>
+  <rect x="130" y="572" width="279" height="53" rx="11" fill="#eeeaf6" />
+  <text x="148" y="595" fill="#593985" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700">Shared accounts</text>
+  <text x="148" y="613" fill="#75628c" font-family="Inter, Arial, sans-serif" font-size="12">Verification · recovery · sessions</text>
+
+  <path d="M439 448h111" stroke="#8d72b2" stroke-width="3" stroke-linecap="round" />
+  <circle cx="438" cy="448" r="6" fill="#7144a8" /><circle cx="550" cy="448" r="6" fill="#7144a8" />
+  <path d="m538 439 12 9-12 9" fill="none" stroke="#7144a8" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+
+  <rect x="560" y="255" width="433" height="385" rx="22" fill="url(#identity)" filter="url(#shadow)" />
+  <circle cx="776" cy="328" r="35" fill="#fff" opacity=".15" />
+  <path d="M762 330a14 14 0 1 1 27 4l-12 12-10-10 12-12" fill="none" stroke="#f8f3ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" />
+  <text x="776" y="396" text-anchor="middle" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="700">Perminister</text>
+  <text x="776" y="425" text-anchor="middle" fill="#dfd3ee" font-family="Inter, Arial, sans-serif" font-size="15">Shared identity &amp; access</text>
+  <path d="M614 459h324" stroke="#9c85ba" stroke-opacity=".65" />
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="612" y="482" width="150" height="58" rx="12" fill="#fff" fill-opacity=".12" stroke="#c7b5dd" stroke-opacity=".55" />
+    <text x="687" y="506" text-anchor="middle" fill="#fff" font-size="13" font-weight="650">App-bound</text>
+    <text x="687" y="525" text-anchor="middle" fill="#dfd3ee" font-size="12">sessions</text>
+    <rect x="779" y="482" width="160" height="58" rx="12" fill="#fff" fill-opacity=".12" stroke="#c7b5dd" stroke-opacity=".55" />
+    <text x="859" y="506" text-anchor="middle" fill="#fff" font-size="13" font-weight="650">Scoped</text>
+    <text x="859" y="525" text-anchor="middle" fill="#dfd3ee" font-size="12">permission grants</text>
+  </g>
+  <text x="776" y="590" text-anchor="middle" fill="#dfd3ee" font-family="Inter, Arial, sans-serif" font-size="13">The app still enforces access to its own data.</text>
+
+  <path d="M994 384h99v-29h66M1093 384v225h66" fill="none" stroke="#8d72b2" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+  <circle cx="994" cy="384" r="6" fill="#7144a8" /><circle cx="1158" cy="355" r="6" fill="#7144a8" /><circle cx="1158" cy="609" r="6" fill="#7144a8" />
+  <path d="m1148 346 10 9-10 9M1148 600l10 9-10 9" fill="none" stroke="#7144a8" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+
+  <rect x="1177" y="246" width="320" height="204" rx="17" fill="#fff" stroke="#e0e4ef" filter="url(#shadow)" />
+  <rect x="1204" y="274" width="42" height="42" rx="12" fill="#dcefe5" />
+  <path d="M1215 286h20v17h-20zM1219 291h12m-12 5h8" fill="none" stroke="#337a60" stroke-linecap="round" stroke-width="1.8" />
+  <text x="1262" y="293" fill="#2e3741" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700">Visitoring</text>
+  <text x="1262" y="315" fill="#818696" font-family="Inter, Arial, sans-serif" font-size="12">Website analytics</text>
+  <path d="M1204 338h267" stroke="#edf0f4" />
+  <text x="1204" y="368" fill="#697082" font-family="Inter, Arial, sans-serif" font-size="13">Keeps its own brand and analytics data.</text>
+  <rect x="1204" y="390" width="135" height="31" rx="15" fill="#eef5f1" />
+  <text x="1221" y="410" fill="#38785e" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700">SCOPED ACCESS</text>
+
+  <rect x="1177" y="500" width="320" height="204" rx="17" fill="#fff" stroke="#e0e4ef" filter="url(#shadow)" />
+  <rect x="1204" y="528" width="42" height="42" rx="12" fill="#f3e8d8" />
+  <path d="M1214 540h21v17h-21zM1218 536h13" fill="none" stroke="#a56a35" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" />
+  <text x="1262" y="547" fill="#2e3741" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700">PostParticle</text>
+  <text x="1262" y="569" fill="#818696" font-family="Inter, Arial, sans-serif" font-size="12">Publishing workspace</text>
+  <path d="M1204 592h267" stroke="#edf0f4" />
+  <text x="1204" y="622" fill="#697082" font-family="Inter, Arial, sans-serif" font-size="13">Keeps its own content and experience.</text>
+  <rect x="1204" y="644" width="135" height="31" rx="15" fill="#f7f1e8" />
+  <text x="1221" y="664" fill="#946235" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700">APP-BOUND SESSION</text>
+
+  <path d="M99 736h1397" stroke="#ececf2" />
+  <text x="101" y="778" fill="#555968" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="650">One shared identity layer.</text>
+  <text x="101" y="803" fill="#818696" font-family="Inter, Arial, sans-serif" font-size="13">Each product keeps its brand, domain data, and authorization checks.</text>
+  <rect x="1277" y="754" width="219" height="43" rx="12" fill="#f1edf8" />
+  <text x="1299" y="781" fill="#5c3b86" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700">Scoped, revocable keys</text>
+</svg>

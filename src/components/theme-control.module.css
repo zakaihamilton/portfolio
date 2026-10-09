@@ -1,0 +1,128 @@
+.control {
+  position: relative;
+  display: inline-flex;
+}
+
+.trigger {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--ink);
+  cursor: pointer;
+  transition:
+    border-color 160ms ease,
+    color 160ms ease,
+    background-color 160ms ease,
+    transform 160ms ease;
+}
+
+.trigger:hover {
+  transform: rotate(12deg);
+  border-color: var(--violet);
+  color: var(--violet);
+}
+
+.trigger svg {
+  width: 19px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 21;
+  top: calc(100% + 9px);
+  right: 0;
+  width: max-content;
+  max-width: min(260px, calc(100vw - 32px));
+  padding: 9px 12px;
+  transform: translateY(-4px);
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  background: var(--tooltip-bg);
+  box-shadow: 0 8px 24px var(--shadow);
+  color: var(--tooltip-ink);
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.4;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 130ms ease,
+    transform 130ms ease,
+    visibility 130ms;
+}
+
+.control:not([data-open="true"]) .trigger:hover + .tooltip,
+.control:not([data-open="true"]) .trigger:focus-visible + .tooltip {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.options {
+  position: absolute;
+  z-index: 20;
+  top: calc(100% + 10px);
+  right: 0;
+  width: 184px;
+  padding: 7px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--surface-raised);
+  box-shadow: 0 14px 38px var(--shadow);
+}
+
+.option {
+  display: grid;
+  width: 100%;
+  min-height: 42px;
+  grid-template-columns: 24px minmax(0, 1fr) 18px;
+  align-items: center;
+  gap: 9px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.option:hover,
+.option[aria-pressed="true"] {
+  background: var(--paper-deep);
+}
+
+.optionIcon {
+  color: var(--violet);
+  justify-self: center;
+}
+
+.check {
+  color: var(--aqua);
+  font-weight: 700;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .trigger {
+    transition: none;
+  }
+
+  .tooltip {
+    transition: none;
+  }
+
+  .trigger:hover {
+    transform: none;
+  }
+}

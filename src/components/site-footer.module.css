@@ -4,14 +4,14 @@
 
 .inner {
   width: min(var(--page-width), calc(100% - 56px));
-  min-height: 96px;
+  min-height: 104px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
   color: var(--muted);
-  font-size: 0.82rem;
+  font-size: 1rem;
 }
 
 .inner p {
@@ -24,16 +24,16 @@
 }
 
 .inner a:hover {
-  color: var(--forest);
+  color: var(--violet);
 }
 
 @media (max-width: 620px) {
   .inner {
     width: calc(100% - 36px);
-    min-height: 110px;
+    min-height: 116px;
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
   }
 }

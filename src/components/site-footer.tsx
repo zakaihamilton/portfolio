@@ -1,18 +1,18 @@
-import Link from "next/link";
+import { Icon } from "@/components/icon";
+import { ExternalLink } from "@/components/tooltip";
 import styles from "./site-footer.module.css";
 
 export function SiteFooter() {
   return (
     <footer className={styles.footer}>
       <div className={styles.inner}>
-        <p>Built with curiosity, care, and a lot of iteration.</p>
-        <Link
+        <p>Made with curiosity. Refined one detail at a time.</p>
+        <ExternalLink
           href="https://github.com/zakaihamilton"
-          rel="noreferrer"
-          target="_blank"
+          label="Zakai Hamilton on GitHub, opens in a new tab"
         >
-          Zakai Hamilton on GitHub <span aria-hidden="true">↗</span>
-        </Link>
+          Find me on GitHub <Icon name="arrow-up-right" size={17} />
+        </ExternalLink>
       </div>
     </footer>
   );
