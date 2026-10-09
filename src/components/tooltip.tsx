@@ -46,8 +46,7 @@ function scheduleTooltipPosition(
   tooltip: HTMLSpanElement | null,
   setPosition: (position: TooltipPosition) => void,
 ) {
-  const updatePosition = () =>
-    setPosition(getTooltipPosition(wrap, tooltip));
+  const updatePosition = () => setPosition(getTooltipPosition(wrap, tooltip));
 
   updatePosition();
   window.requestAnimationFrame(updatePosition);
@@ -125,15 +124,15 @@ export function TechnologyTooltip({ name }: TechnologyTooltipProps) {
     setOpen(true);
   }
 
-  function handlePointerEnter(event: PointerEvent<HTMLSpanElement>) {
+  function handlePointerEnter(event: PointerEvent<HTMLButtonElement>) {
     if (event.pointerType !== "touch") showTooltip();
   }
 
-  function handlePointerLeave(event: PointerEvent<HTMLSpanElement>) {
+  function handlePointerLeave(event: PointerEvent<HTMLButtonElement>) {
     if (event.pointerType !== "touch") setOpen(false);
   }
 
-  function handlePointerDown(event: PointerEvent<HTMLSpanElement>) {
+  function handlePointerDown(event: PointerEvent<HTMLButtonElement>) {
     if (event.pointerType === "touch") {
       scheduleTooltipPosition(wrapRef.current, tooltipRef.current, setPosition);
       setOpen((wasOpen) => !wasOpen);
@@ -145,21 +144,19 @@ export function TechnologyTooltip({ name }: TechnologyTooltipProps) {
       className={styles.wrap}
       data-open={open ? "true" : undefined}
       ref={wrapRef}
-      onBlur={(event) => {
-        if (!event.currentTarget.contains(event.relatedTarget)) setOpen(false);
-      }}
-      onFocus={showTooltip}
-      onKeyDown={(event) => {
-        if (event.key === "Escape") setOpen(false);
-      }}
-      onPointerDown={handlePointerDown}
-      onPointerEnter={handlePointerEnter}
-      onPointerLeave={handlePointerLeave}
     >
       <button
         aria-describedby={tooltipId}
         className={styles.technology}
         type="button"
+        onBlur={() => setOpen(false)}
+        onFocus={showTooltip}
+        onKeyDown={(event) => {
+          if (event.key === "Escape") setOpen(false);
+        }}
+        onPointerDown={handlePointerDown}
+        onPointerEnter={handlePointerEnter}
+        onPointerLeave={handlePointerLeave}
       >
         {name}
       </button>
@@ -213,19 +210,6 @@ export function ExternalLink({
       className={styles.wrap}
       data-open={open ? "true" : undefined}
       ref={wrapRef}
-      onBlur={(event) => {
-        if (!event.currentTarget.contains(event.relatedTarget)) setOpen(false);
-      }}
-      onFocus={showTooltip}
-      onKeyDown={(event) => {
-        if (event.key === "Escape") setOpen(false);
-      }}
-      onPointerEnter={(event) => {
-        if (event.pointerType !== "touch") showTooltip();
-      }}
-      onPointerLeave={(event) => {
-        if (event.pointerType !== "touch") setOpen(false);
-      }}
     >
       <a
         aria-describedby={tooltipId}
@@ -234,6 +218,17 @@ export function ExternalLink({
         href={href}
         rel="noreferrer"
         target="_blank"
+        onBlur={() => setOpen(false)}
+        onFocus={showTooltip}
+        onKeyDown={(event) => {
+          if (event.key === "Escape") setOpen(false);
+        }}
+        onPointerEnter={(event) => {
+          if (event.pointerType !== "touch") showTooltip();
+        }}
+        onPointerLeave={(event) => {
+          if (event.pointerType !== "touch") setOpen(false);
+        }}
       >
         {children}
       </a>

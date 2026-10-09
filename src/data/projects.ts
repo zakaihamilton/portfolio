@@ -25,7 +25,8 @@ export const projects: Project[] = [
     number: "01",
     name: "Shifting Front",
     category: "Seeded RTS campaign",
-    summary: "One four-digit seed grows into a replayable, six-operation campaign.",
+    summary:
+      "One four-digit seed grows into a replayable, six-operation campaign.",
     description:
       "Choose a seed and Shifting Front writes the conflict around it: rival factions, named commanders, briefings, objectives, and a battlefield shaped by its biome. Then play six linked operations—build your economy, position a combined-arms force, and adapt when the enemy changes its plan.",
     detailHeading: "A code you can replay, share, and fight over.",
@@ -51,7 +52,8 @@ export const projects: Project[] = [
     number: "02",
     name: "Visitoring",
     category: "Privacy-first website analytics",
-    summary: "Understand your site’s traffic without cookies or stored IP addresses.",
+    summary:
+      "Understand your site’s traffic without cookies or stored IP addresses.",
     description:
       "Visitoring turns page views and custom events into readable reports on visitors, sessions, popular pages, and referrers. It keeps useful context—like broad device and region trends—while leaving raw IP addresses, cookies, and URL query details out of stored analytics.",
     detailHeading: "Measure the visit, not the person.",
@@ -187,7 +189,8 @@ export const projects: Project[] = [
     number: "07",
     name: "Zakamurai",
     category: "Local-first browser IDE",
-    summary: "Write, review, build, and preview web projects without leaving the browser.",
+    summary:
+      "Write, review, build, and preview web projects without leaving the browser.",
     description:
       "Zakamurai puts a file tree, editor, local AI assistant, browser-based builds, runtime logs, and live preview in one workspace. AI suggestions arrive as structured diffs you can inspect before approving; then build and preview the proposed code without a local toolchain.",
     detailHeading: "Code, ask, inspect, run—in the same browser.",
@@ -240,7 +243,6 @@ export const projects: Project[] = [
 ];
 
 export const projectCount = projects.length;
-export const formattedProjectCount = String(projectCount).padStart(2, "0");
 
 export function getProject(slug: string) {
   return projects.find((project) => project.slug === slug);

@@ -7,6 +7,8 @@ type ProjectVisualProps = {
   variant: "card" | "hero" | "detail";
   priority?: boolean;
   decorative?: boolean;
+  imageSrc?: string;
+  imageFit?: Project["imageFit"];
 };
 
 const toneClasses: Record<Project["mediaTone"], string> = {
@@ -22,12 +24,16 @@ export function ProjectVisual({
   variant,
   priority = false,
   decorative = false,
+  imageSrc,
+  imageFit,
 }: ProjectVisualProps) {
+  const source = imageSrc ?? project.image;
+  const fit = imageFit ?? project.imageFit;
   const frameClasses = [
     styles.frame,
     styles[variant],
     toneClasses[project.mediaTone],
-    project.imageFit === "contain" ? styles.contain : styles.cover,
+    fit === "contain" ? styles.contain : styles.cover,
   ].join(" ");
 
   return (
@@ -44,8 +50,8 @@ export function ProjectVisual({
               ? "(max-width: 760px) 100vw, 88vw"
               : "(max-width: 760px) 100vw, 50vw"
         }
-        src={project.image}
-        unoptimized={project.image.endsWith(".svg")}
+        src={source}
+        unoptimized={source.endsWith(".svg")}
       />
     </div>
   );

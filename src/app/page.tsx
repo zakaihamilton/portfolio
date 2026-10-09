@@ -46,6 +46,8 @@ export default function HomePage() {
               decorative
               project={featuredProjects[1]}
               variant="hero"
+              imageSrc="/hero/ideas-abstract.png"
+              imageFit="cover"
             />
           </div>
           <div className={styles.heroFrontCard}>
@@ -54,6 +56,8 @@ export default function HomePage() {
               priority
               project={featuredProjects[0]}
               variant="hero"
+              imageSrc="/hero/software-clarity.png"
+              imageFit="cover"
             />
           </div>
           <span className={styles.heroSpark} />
