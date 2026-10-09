@@ -14,7 +14,7 @@
     "lint": "eslint . --max-warnings=0",
     "format:check": "prettier --check .",
     "health": "repnix check",
-    "health:a11y": "playwright test tests/e2e/guardrails.spec.ts --project=chromium",
+    "health:a11y": "playwright test tests/e2e/guardrails.spec.ts --project=chromium --grep=WCAG",
     "health:visual": "if [ \"$RUN_VISUAL_REGRESSION\" = \"1\" ] || [ \"$(uname)\" = \"Darwin\" ]; then playwright test tests/e2e/guardrails.spec.ts --project=chromium; else echo \"Visual regression runs in the macOS guardrail job.\"; fi",
     "health:styles": "stylelint --formatter json \"**/*.{css,pcss,postcss}\""
   },
