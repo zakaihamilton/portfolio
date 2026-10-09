@@ -94,9 +94,9 @@ export default function HomePage() {
             I turn complex ideas into <em>useful software.</em>
           </h2>
           <p>
-            I’m Zakai Hamilton. I like starting with a tangled system, finding
-            the part that matters, and shaping it into something clear and
-            useful.
+            I’m <strong>Zakai Hamilton</strong>. I like starting with a tangled
+            system, finding the part that matters, and shaping it into something
+            clear and useful.
           </p>
           <p>
             That curiosity has taken me from a seed-driven strategy game to
@@ -131,6 +131,12 @@ export default function HomePage() {
             label="Browse Zakai Hamilton’s code on GitHub, opens in a new tab"
           >
             GitHub <Icon name="arrow-up-right" size={17} />
+          </ExternalLink>
+          <ExternalLink
+            href="https://www.linkedin.com/in/zakai-hamilton"
+            label="Zakai Hamilton on LinkedIn, opens in a new tab"
+          >
+            LinkedIn <Icon name="arrow-up-right" size={17} />
           </ExternalLink>
           <ExternalLink
             href="https://shiftingfront.com"
