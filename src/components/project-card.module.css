@@ -90,17 +90,17 @@
 }
 
 .detailLink svg,
-.liveLink svg {
+.externalLink svg {
   display: inline-block;
   transition: transform 160ms ease;
 }
 
 .detailLink:hover svg,
-.liveLink:hover svg {
+.externalLink:hover svg {
   transform: translate(2px, -2px);
 }
 
-.liveLink {
+.externalLink {
   color: var(--muted);
   text-decoration: underline;
   text-underline-offset: 4px;
@@ -109,7 +109,7 @@
 @media (prefers-reduced-motion: reduce) {
   .visualLink :global(img),
   .detailLink svg,
-  .liveLink svg {
+  .externalLink svg {
     transition: none;
   }
 }

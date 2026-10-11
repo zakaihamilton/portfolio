@@ -44,13 +44,20 @@ export function ProjectCard({ project }: ProjectCardProps) {
           </Link>
           {project.liveUrl ? (
             <ExternalLink
-              className={styles.liveLink}
+              className={styles.externalLink}
               href={project.liveUrl}
-              label={`Open ${project.name}, opens in a new tab`}
+              label={`Visit the live ${project.name} site, opens in a new tab`}
             >
-              Try it <Icon name="arrow-up-right" size={17} />
+              Visit site <Icon name="arrow-up-right" size={17} />
             </ExternalLink>
           ) : null}
+          <ExternalLink
+            className={styles.externalLink}
+            href={project.repositoryUrl}
+            label={`${project.name} source code on GitHub, opens in a new tab`}
+          >
+            GitHub <Icon name="arrow-up-right" size={17} />
+          </ExternalLink>
         </div>
       </div>
     </article>

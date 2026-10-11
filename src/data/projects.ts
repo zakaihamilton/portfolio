@@ -72,6 +72,7 @@ export const projects: Project[] = [
     imageFit: "contain",
     mediaTone: "forest",
     repositoryUrl: "https://github.com/zakaihamilton/visitoring",
+    liveUrl: "https://visitoring.vercel.app",
     resourceUrl: "https://visitoring.vercel.app/developers",
     resourceLabel: "Developer guide",
   },
@@ -104,6 +105,7 @@ export const projects: Project[] = [
     imageFit: "contain",
     mediaTone: "sand",
     repositoryUrl: "https://github.com/zakaihamilton/postparticle",
+    liveUrl: "https://postparticle.vercel.app",
   },
   {
     slug: "perminister",
@@ -129,6 +131,7 @@ export const projects: Project[] = [
     imageFit: "contain",
     mediaTone: "paper",
     repositoryUrl: "https://github.com/zakaihamilton/perminister",
+    liveUrl: "https://perminister.com",
   },
   {
     slug: "repnix",
@@ -154,8 +157,7 @@ export const projects: Project[] = [
     imageFit: "contain",
     mediaTone: "slate",
     repositoryUrl: "https://github.com/zakaihamilton/repnix",
-    resourceUrl: "https://www.npmjs.com/package/repnix",
-    resourceLabel: "npm package",
+    liveUrl: "https://www.npmjs.com/package/repnix",
   },
   {
     slug: "hostpresent",
@@ -236,6 +238,7 @@ export const projects: Project[] = [
     imageFit: "contain",
     mediaTone: "paper",
     repositoryUrl: "https://github.com/zakaihamilton/peerovo",
+    liveUrl: "https://peerovo.up.railway.app",
     resourceUrl:
       "https://github.com/zakaihamilton/peerovo/blob/main/docs/adding-projects.md",
     resourceLabel: "Integration guide",

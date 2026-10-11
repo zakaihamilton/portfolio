@@ -67,9 +67,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             <ExternalLink
               className={styles.primaryLink}
               href={project.liveUrl}
-              label={`Open ${project.name}, opens in a new tab`}
+              label={`Visit the live ${project.name} site, opens in a new tab`}
             >
-              Open the project <Icon name="arrow-up-right" size={17} />
+              Visit the live site <Icon name="arrow-up-right" size={17} />
             </ExternalLink>
           ) : null}
           <ExternalLink
