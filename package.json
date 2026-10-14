@@ -4,7 +4,7 @@
   "private": true,
   "packageManager": "npm@11.12.1",
   "engines": {
-    "node": ">=22.20.0"
+    "node": ">=24.22.0 <25"
   },
   "scripts": {
     "dev": "next dev",
@@ -19,7 +19,7 @@
     "health:styles": "stylelint --formatter json \"**/*.{css,pcss,postcss}\""
   },
   "dependencies": {
-    "next": "^16.3.8",
+    "next": "16.4.1",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
     "visitoring": "^0.1.0"
@@ -27,11 +27,11 @@
   "devDependencies": {
     "@axe-core/playwright": "^4.13.0",
     "@playwright/test": "^1.63.0",
-    "@types/node": "^26.6.4",
+    "@types/node": "^24",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "eslint": "^9.39.5",
-    "eslint-config-next": "^16.3.8",
+    "eslint-config-next": "16.4.1",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "knip": "^6.39.0",
     "prettier": "^3.9.9",
