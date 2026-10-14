@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Newsreader, Source_Sans_3 } from "next/font/google";
+import { VisitoringProvider } from "visitoring";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import "./globals.css";
@@ -54,9 +55,11 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <SiteHeader />
-        {children}
-        <SiteFooter />
+        <VisitoringProvider siteKey="vk_uWQW_gpIZLtxApq_Lp1BNWt6CsfOqsSD">
+          <SiteHeader />
+          {children}
+          <SiteFooter />
+        </VisitoringProvider>
       </body>
     </html>
   );
