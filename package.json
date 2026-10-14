@@ -21,9 +21,12 @@
   "dependencies": {
     "next": "^16.3.8",
     "react": "^19.3.0",
-    "react-dom": "^19.3.0"
+    "react-dom": "^19.3.0",
+    "visitoring": "^0.1.0"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@playwright/test": "^1.63.0",
     "@types/node": "^26.6.4",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
@@ -33,10 +36,8 @@
     "knip": "^6.39.0",
     "prettier": "^3.9.9",
     "repnix": "^1.1.0",
-    "typescript": "^6.0.3",
-    "@axe-core/playwright": "^4.13.0",
-    "@playwright/test": "^1.63.0",
     "stylelint": "^17.11.1",
-    "stylelint-config-standard": "^40.0.0"
+    "stylelint-config-standard": "^40.0.0",
+    "typescript": "^6.0.3"
   }
 }
