@@ -4,7 +4,7 @@ A Next.js portfolio for six independent software projects. The site uses TypeScr
 
 ## Run locally
 
-Requirements: Node.js 22.20 or newer and npm.
+Requirements: Node.js 24.22.0 (Node 24 LTS) and npm.
 
 ```sh
 npm ci
