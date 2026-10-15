@@ -4,11 +4,11 @@ A Next.js portfolio for six independent software projects. The site uses TypeScr
 
 ## Run locally
 
-Requirements: Node.js 24.22.0 (Node 24 LTS) and npm.
+Requirements: Node.js 24.22.0 (Node 24 LTS) and pnpm 10.33.0.
 
 ```sh
-npm ci
-npm run dev
+pnpm install --frozen-lockfile
+pnpm run dev
 ```
 
 Open http://localhost:3000.
@@ -16,8 +16,8 @@ Open http://localhost:3000.
 ## Quality checks
 
 ```sh
-npm run health
-npm run build
+pnpm run health
+pnpm run build
 ```
 
 RepNix requires type, lint, formatting, accessibility, and dead-code coverage. GitHub Actions runs these checks and a production build on pushes and pull requests.
