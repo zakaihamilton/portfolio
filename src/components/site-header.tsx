@@ -24,14 +24,19 @@ export function SiteHeader() {
         <nav aria-label="Primary navigation" className={styles.nav}>
           <Link href="/#work">Work</Link>
           <Link href="/#about">About</Link>
-          <ExternalLink
-            className={styles.github}
-            href="https://github.com/zakaihamilton"
-            label="GitHub, opens in a new tab"
-          >
-            <span className={styles.githubLabel}>GitHub</span>
-            <Icon name="arrow-up-right" size={16} />
-          </ExternalLink>
+          <a className={styles.contact} href="mailto:zakaihamilton@gmail.com">
+            Contact
+          </a>
+          <span className={styles.githubSlot}>
+            <ExternalLink
+              className={styles.github}
+              href="https://github.com/zakaihamilton"
+              label="GitHub, opens in a new tab"
+            >
+              <span className={styles.githubLabel}>GitHub</span>
+              <Icon name="arrow-up-right" size={16} />
+            </ExternalLink>
+          </span>
           <ThemeControl />
         </nav>
       </div>

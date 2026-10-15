@@ -7,12 +7,15 @@ export function SiteFooter() {
     <footer className={styles.footer}>
       <div className={styles.inner}>
         <p>Made with curiosity. Refined one detail at a time.</p>
-        <ExternalLink
-          href="https://github.com/zakaihamilton"
-          label="Zakai Hamilton on GitHub, opens in a new tab"
-        >
-          Find me on GitHub <Icon name="arrow-up-right" size={17} />
-        </ExternalLink>
+        <div className={styles.links}>
+          <a href="mailto:zakaihamilton@gmail.com">zakaihamilton@gmail.com</a>
+          <ExternalLink
+            href="https://github.com/zakaihamilton"
+            label="Zakai Hamilton on GitHub, opens in a new tab"
+          >
+            Find me on GitHub <Icon name="arrow-up-right" size={17} />
+          </ExternalLink>
+        </div>
       </div>
     </footer>
   );
