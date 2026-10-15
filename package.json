@@ -30,6 +30,7 @@
     "@types/node": "^24",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
+    "@typescript/native": "npm:typescript@^7.0.2",
     "eslint": "^9.39.5",
     "eslint-config-next": "16.4.1",
     "eslint-plugin-jsx-a11y": "^6.10.2",
@@ -38,6 +39,6 @@
     "repnix": "^1.1.0",
     "stylelint": "^17.11.1",
     "stylelint-config-standard": "^40.0.0",
-    "typescript": "^6.0.3"
+    "typescript": "npm:@typescript/typescript6@^6.0.2"
   }
 }
