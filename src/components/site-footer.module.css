@@ -1,5 +1,7 @@
 .footer {
-  border-top: 1px solid var(--line);
+  border-top: 1px solid rgb(255 255 255 / 24%);
+  background: var(--footer-background);
+  color: var(--footer-foreground);
 }
 
 .inner {
@@ -10,7 +12,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  color: var(--muted);
+  color: inherit;
   font-size: 1rem;
 }
 
@@ -26,12 +28,14 @@
 }
 
 .inner a {
-  color: var(--ink);
+  color: inherit;
   text-decoration: none;
 }
 
-.inner a:hover {
-  color: var(--violet);
+.inner a:hover,
+.inner a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
 }
 
 @media (max-width: 840px) {
