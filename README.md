@@ -1,6 +1,6 @@
 # Zakai Hamilton Portfolio
 
-A Next.js portfolio for six independent software projects. The site uses TypeScript, the App Router, and CSS Modules. Project content and images are stored locally in this repository; there is no database or runtime dependency on sibling projects.
+A Next.js portfolio for eight software projects. The site uses TypeScript, the App Router, and CSS Modules. Project content and images are stored locally in this repository; there is no database or runtime dependency on sibling projects.
 
 ## Run locally
 
