@@ -4,12 +4,20 @@ import { Icon } from "@/components/icon";
 import { ExternalLink } from "@/components/tooltip";
 import { ProjectCard } from "@/components/project-card";
 import { ProjectVisual } from "@/components/project-visual";
-import { projectCount, projects } from "@/data/projects";
+import { getProject, projectCount, projects } from "@/data/projects";
 import styles from "./page.module.css";
 
-export default function HomePage() {
-  const featuredProjects = [projects[0], projects[6]];
+const featuredProjects = ["shiftingfront", "zakamurai"].map((slug) => {
+  const project = getProject(slug);
 
+  if (!project) {
+    throw new Error(`Featured project "${slug}" is missing from the catalog.`);
+  }
+
+  return project;
+});
+
+export default function HomePage() {
   return (
     <main id="main-content">
       <section aria-labelledby="intro-title" className={styles.hero}>
