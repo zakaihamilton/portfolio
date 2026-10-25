@@ -4,7 +4,7 @@ A Next.js portfolio for eight software projects. The site uses TypeScript, the A
 
 ## Run locally
 
-Requirements: Node.js 24.22.0 (Node 24 LTS) and pnpm 10.33.0.
+Requirements: Node.js 24.22.1 (Node 24 LTS) and pnpm 10.33.0.
 
 ```sh
 pnpm install --frozen-lockfile
