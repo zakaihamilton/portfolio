@@ -243,6 +243,34 @@ export const projects: Project[] = [
       "https://github.com/zakaihamilton/peerovo/blob/main/docs/adding-projects.md",
     resourceLabel: "Integration guide",
   },
+  {
+    slug: "nanogres",
+    number: "09",
+    name: "Nanogres",
+    category: "PostgreSQL workspace console",
+    summary:
+      "Manage Postgres databases, run guarded queries, and restore backups from one workspace.",
+    description:
+      "Nanogres is a self-hosted PostgreSQL management workspace with a browser studio for everyday database operations. Create and inspect databases, review schemas and storage, run SQL with built-in safeguards, and keep connection snippets, access roles, and automated backups close at hand.",
+    detailHeading: "Postgres operations, in one clear workspace.",
+    approach:
+      "Nanogres brings database inventory, a browser SQL studio, connection setup, access control, and backup recovery into one control plane. Query limits and read-only protection help guard production data, while connection and storage telemetry make it easier to see what is happening across a workspace.",
+    highlights: [
+      "Create and organize databases, then inspect schemas, row counts, constraints, and storage",
+      "Run SQL with execution timing, row limits, and read-only transaction protection",
+      "Copy connection strings and starter snippets for Node.js, Python, Go, and .env files",
+      "Schedule database snapshots and restore a backup into a fresh database",
+      "Manage database roles and monitor active connections, storage, and stalled queries",
+    ],
+    technologies: ["Next.js", "TypeScript", "PostgreSQL"],
+    image: "/projects/nanogres.svg",
+    imageAlt:
+      "Illustrative Nanogres Studio workspace showing database health, resource metrics, SQL editing, and backup status",
+    imageFit: "contain",
+    mediaTone: "slate",
+    repositoryUrl: "https://github.com/zakaihamilton/nanogres",
+    liveUrl: "https://nanogres.vercel.app",
+  },
 ];
 
 export const projectCount = projects.length;
