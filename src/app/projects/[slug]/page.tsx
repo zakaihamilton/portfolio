@@ -29,7 +29,7 @@ export async function generateMetadata({
     title: project.name,
     description: project.summary,
     openGraph: {
-      title: project.name + " — Zakai Hamilton",
+      title: `${project.name} — Zakai Hamilton`,
       description: project.summary,
       type: "article",
     },
