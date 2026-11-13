@@ -11,7 +11,7 @@
     "build": "next build",
     "start": "next start",
     "typecheck": "next typegen && tsc --noEmit",
-    "lint": "eslint . --max-warnings=0",
+    "lint": "biome lint .",
     "format:check": "prettier --check .",
     "health": "repnix check",
     "health:a11y": "playwright test tests/e2e/guardrails.spec.ts --project=chromium --grep=WCAG",
@@ -30,14 +30,12 @@
     "@types/node": "^24",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
-    "eslint": "^9.39.5",
-    "eslint-config-next": "16.4.1",
-    "eslint-plugin-jsx-a11y": "^6.10.2",
     "knip": "^6.39.0",
     "prettier": "^3.9.9",
     "repnix": "^1.1.0",
     "stylelint": "^17.11.1",
     "stylelint-config-standard": "^40.0.0",
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "@biomejs/biome": "2.6.6"
   }
 }

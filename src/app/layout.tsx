@@ -50,6 +50,7 @@ export default function RootLayout({
     >
       <head>
         <script
+          /* biome-ignore lint/security/noDangerouslySetInnerHtml: This constant bootstrap applies the saved theme before hydration and is not user input. */
           dangerouslySetInnerHTML={{ __html: portfolioBootstrap }}
           id="portfolio-preferences"
         />

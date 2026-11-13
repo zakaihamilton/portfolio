@@ -5,7 +5,7 @@ type AboutArtworkProps = {
 export function AboutArtwork({ className }: AboutArtworkProps) {
   return (
     <div aria-hidden="true" className={className}>
-      <svg focusable="false" viewBox="0 0 560 470">
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 560 470">
         <path
           d="M93 65C146 17 229 31 282 42c72 14 143 2 194 50 53 50 38 115 45 179 7 63-33 129-100 148-73 21-128-22-201-15-66 6-134 30-181-17-46-46-30-110-28-173C13 151 36 116 93 65Z"
           fill="var(--violet-soft)"

@@ -110,6 +110,7 @@ export function ThemeControl() {
   }
 
   return (
+    // biome-ignore lint/a11y/noStaticElementInteractions: This wrapper observes focus leaving the composite theme picker to close its menu.
     <div
       className={styles.control}
       data-open={open ? "true" : undefined}
@@ -139,11 +140,10 @@ export function ThemeControl() {
         Choose System, Light, or Dark.
       </span>
       {open ? (
-        <div
+        <fieldset
           aria-label="Color theme"
           className={styles.options}
           id="theme-options"
-          role="group"
         >
           {themes.map((option) => (
             <button
@@ -170,7 +170,7 @@ export function ThemeControl() {
               ) : null}
             </button>
           ))}
-        </div>
+        </fieldset>
       ) : null}
     </div>
   );

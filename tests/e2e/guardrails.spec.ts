@@ -94,7 +94,7 @@ test("home page matches the reviewed desktop and mobile layouts", async ({
     await page.goto("/");
     await expect(page.locator("main").first()).toBeVisible();
     await prepareScreenshot(page);
-    await expect(page).toHaveScreenshot("home-" + size.name + ".png", {
+    await expect(page).toHaveScreenshot(`home-${size.name}.png`, {
       fullPage: true,
       animations: "disabled",
       caret: "hide",
